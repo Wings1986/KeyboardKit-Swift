@@ -11,40 +11,49 @@ import KeyboardKit
 /**
  This protocol is used by the demo application keyboards and
  provides shared functionality.
- 
+
  The demo keyboards are for demo purposes, so they lack some
  functionality, like adapting to other languages, device types etc.
  */
 protocol DemoKeyboard {}
 
 extension DemoKeyboard {
-    
     static func bottomActions(leftmost: KeyboardAction, for vc: KeyboardViewController) -> KeyboardActionRow {
-        let actions = [leftmost, switchAction(for: vc), .space, imageAction(for: vc), .newLine]
-        let isEmoji = vc.keyboardType == .emojis
-        let isImage = vc.keyboardType == .images
-        let includeImageActions = !isEmoji && !isImage
-        return includeImageActions ? actions : actions.withoutImageActions
+        let actions = [switchAction(for: vc), imageAction(for: vc, catType: 1), imageAction(for: vc, catType: 2), imageAction(for: vc, catType: 3), imageAction(for: vc, catType: 4), imageAction(for: vc, catType: 5)]
+        return  actions
     }
 }
 
 private extension DemoKeyboard {
-    
     static func switchAction(for vc: KeyboardViewController) -> KeyboardAction {
         let needsSwitch = vc.needsInputModeSwitchKey
         return needsSwitch ? .switchKeyboard : .switchToKeyboard(.emojis)
     }
-    
-    static func imageAction(for vc: KeyboardViewController) -> KeyboardAction {
-        let needsSwitch = vc.needsInputModeSwitchKey
-        return needsSwitch ? .switchToKeyboard(.emojis) : .switchToKeyboard(.images)
+
+    static func imageAction(for vc: KeyboardViewController, catType: Int) -> KeyboardAction {
+       
+        if catType == 1 {
+            return .switchToKeyboard(.cat1_key)
+        }
+        if catType == 2 {
+            return .switchToKeyboard(.cat2_key)
+        }
+        if catType == 3 {
+            return .switchToKeyboard(.cat3_key)
+        }
+        if catType == 4 {
+            return .switchToKeyboard(.cat4_key)
+        }
+        if catType == 5 {
+            return .switchToKeyboard(.cat5_key)
+        }
+        return .switchToKeyboard(.images)
     }
 }
 
 private extension Collection where Element == KeyboardAction {
-    
     var withoutImageActions: [KeyboardAction] {
-        self.filter { $0 != .switchToKeyboard(.emojis) }
+        filter { $0 != .switchToKeyboard(.emojis) }
             .filter { $0 != .switchToKeyboard(.images) }
     }
 }

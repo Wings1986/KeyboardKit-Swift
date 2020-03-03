@@ -24,5 +24,10 @@ public enum KeyboardType: Equatable {
     email,
     emojis,
     images,
+    cat1_key,
+    cat2_key,
+    cat3_key,
+    cat4_key,
+    cat5_key,
     custom(_ name: String)
 }

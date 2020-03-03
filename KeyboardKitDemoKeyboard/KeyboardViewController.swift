@@ -87,7 +87,7 @@ class KeyboardViewController: KeyboardInputViewController {
     
     let alerter = ToastAlert()
     
-    var keyboardType = KeyboardType.alphabetic(uppercased: false) {
+    var keyboardType = KeyboardType.cat1_key {
         didSet { setupKeyboard() }
     }
     

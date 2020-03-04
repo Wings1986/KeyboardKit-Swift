@@ -53,6 +53,9 @@ open class KeyboardButtonRowCollectionView: KeyboardCollectionView, PagedKeyboar
         collectionViewLayout = Layout(rowHeight: configuration.rowHeight)
     }
     
+    open func reloadSetup(_ actions: [KeyboardAction])  {
+        self.rows = actions.rows(for: configuration)
+    }
     
     // MARK: - View Lifecycle
     
@@ -122,8 +125,8 @@ open class KeyboardButtonRowCollectionView: KeyboardCollectionView, PagedKeyboar
     // MARK: - Properties
     
     public let id: String
-    public let configuration: Configuration
-    public let rows: KeyboardActionRows
+    public var configuration: Configuration
+    public var rows: KeyboardActionRows
     
     private let buttonCreator: KeyboardButtonCreator
     

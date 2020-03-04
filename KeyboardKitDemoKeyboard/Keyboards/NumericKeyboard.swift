@@ -17,7 +17,7 @@ struct NumericKeyboard: DemoKeyboard {
         actions = type(of: self).actions(in: viewController)
     }
     
-    let actions: KeyboardActionRows
+    var actions: KeyboardActionRows
 }
 
 private extension NumericKeyboard {

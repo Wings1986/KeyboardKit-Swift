@@ -90,7 +90,9 @@ class KeyboardViewController: KeyboardInputViewController {
     var keyboardType = KeyboardType.cat1_key {
         didSet { setupKeyboard() }
     }
-    
+    var tabButton: DemoButton?
+    var keyBoardTypeCurrent: KeyboardType?
+    var keyboardCollection : KeyboardButtonRowCollectionView?
     
     // MARK: - Autocomplete
     

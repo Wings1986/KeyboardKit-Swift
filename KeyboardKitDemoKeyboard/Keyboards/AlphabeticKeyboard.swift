@@ -19,7 +19,7 @@ struct AlphabeticKeyboard: DemoKeyboard {
             in: viewController)
     }
 
-    let actions: KeyboardActionRows
+    var actions: KeyboardActionRows
 }
 
 private extension AlphabeticKeyboard {

@@ -49,6 +49,7 @@ extension KeyboardViewController {
         let buttonsPerRow = isLandscape ? 10 : 8
         let config = KeyboardButtonRowCollectionView.Configuration(rowHeight: 40, rowsPerPage: rowsPerPage, buttonsPerRow: buttonsPerRow)
         let view = KeyboardButtonRowCollectionView(actions: keyboard.actions, configuration: config) { [unowned self] in self.button(for: $0) }
+        
         let bottom = buttonRow(for: keyboard.bottomActions, distribution: .fillProportionally)
         keyboardStackView.addArrangedSubview(view)
         keyboardStackView.addArrangedSubview(bottom)
@@ -58,7 +59,7 @@ extension KeyboardViewController {
         let keyboard = ImageKeyboard(in: self)
         let isLandscape = size.width > 400
         let rowsPerPage = isLandscape ? 3 : 4
-        let buttonsPerRow = isLandscape ? 8 : 6
+        let buttonsPerRow = isLandscape ? 7 : 5
         
         var actions: [KeyboardAction] = keyboard.actions
         if type == 1 {
@@ -77,11 +78,17 @@ extension KeyboardViewController {
             actions = keyboard.actionsCat5
         }
         
-        let config = KeyboardButtonRowCollectionView.Configuration(rowHeight: 50, rowsPerPage: rowsPerPage, buttonsPerRow: buttonsPerRow)
-        let view = KeyboardButtonRowCollectionView(actions: actions, configuration: config) { [unowned self] in self.button(for: $0) }
+        let config = KeyboardButtonRowCollectionView.Configuration(rowHeight: 60, rowsPerPage: rowsPerPage, buttonsPerRow: buttonsPerRow)
+        let view = KeyboardButtonRowCollectionView(actions: actions, configuration: config) { [unowned self] in
+            self.button(for: $0)
+            
+        }
         let bottom = buttonRow(for: keyboard.bottomActions, distribution: .fillProportionally)
-        keyboardStackView.addArrangedSubview(view)
+        bottom.addBorder(.bottom, color: .black, thickness: 0.5)
+        self.keyboardCollection = view
+        
         keyboardStackView.addArrangedSubview(bottom)
+        keyboardStackView.addArrangedSubview(view)
     }
     
     
@@ -96,5 +103,35 @@ extension KeyboardViewController {
         let keyboard = SymbolicKeyboard(in: self)
         let rows = buttonRows(for: keyboard.actions, distribution: .fillProportionally)
         keyboardStackView.addArrangedSubviews(rows)
+    }
+}
+extension UIView {
+    func addBorder(_ edge: UIRectEdge, color: UIColor, thickness: CGFloat) {
+        let subview = UIView()
+        subview.translatesAutoresizingMaskIntoConstraints = false
+        subview.backgroundColor = color
+        self.addSubview(subview)
+        switch edge {
+        case .top, .bottom:
+            subview.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0).isActive = true
+            subview.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0).isActive = true
+            subview.heightAnchor.constraint(equalToConstant: thickness).isActive = true
+            if edge == .top {
+                subview.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
+            } else {
+                subview.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
+            }
+        case .left, .right:
+            subview.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
+            subview.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
+            subview.widthAnchor.constraint(equalToConstant: thickness).isActive = true
+            if edge == .left {
+                subview.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0).isActive = true
+            } else {
+                subview.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0).isActive = true
+            }
+        default:
+            break
+        }
     }
 }

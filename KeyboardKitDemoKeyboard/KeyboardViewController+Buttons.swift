@@ -15,6 +15,10 @@ extension KeyboardViewController {
         if action == .none { return KeyboardSpacerView(width: 10) }
         let view = DemoButton.fromNib(owner: self)
         view.setup(with: action, in: self, distribution: distribution)
+        
+        
+        
+        
         return view
     }
     

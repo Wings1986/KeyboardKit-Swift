@@ -22,17 +22,34 @@ class DemoButton: KeyboardButtonView {
     public func setup(with action: KeyboardAction, in viewController: KeyboardInputViewController, distribution: UIStackView.Distribution = .fillEqually) {
         super.setup(with: action, in: viewController)
         backgroundColor = .clearTappable
-        buttonView?.backgroundColor = action.buttonColor(for: viewController)
+        //
+
         DispatchQueue.main.async {
             self.buttonImageMain?.image = action.buttonImage
         }
+
         switch action {
         case let .switchToKeyboard(type):
-            if type == .cat1_key || type == .cat2_key || type == .cat3_key || type == .cat4_key || type == .cat5_key{
+            if  type == .cat2_key || type == .cat3_key || type == .cat4_key || type == .cat5_key {
+                
                 DispatchQueue.main.async {
+                    self.currentKeyboard = type
                     self.buttonImageMain?.image = action.buttonCatImages(for: type)
                 }
-                
+            }
+            else if type == .cat1_key
+            {
+                DispatchQueue.main.async {
+                    self.currentKeyboard = type
+                    self.buttonImageMain?.image = action.buttonSelectedCatImages(for: type)
+                    let demo = viewController as? KeyboardViewController
+                    demo?.tabButton = self
+                    
+                }
+            }
+        case .switchKeyboard:
+            DispatchQueue.main.async {
+                self.buttonImageMain?.image = action.buttonImage
             }
             break
 
@@ -44,8 +61,13 @@ class DemoButton: KeyboardButtonView {
         buttonView?.tintColor = action.tintColor(in: viewController)
         width = action.buttonWidth(for: distribution)
         applyShadow(.standardButtonShadow)
+        currentAction = action
+        currentCatButton = self
     }
 
+    var currentAction: KeyboardAction?
+    var currentKeyboard: KeyboardType?
+    var currentCatButton: DemoButton?
     @IBOutlet var buttonImageMain: UIImageView!
     @IBOutlet var buttonView: UIView? {
         didSet { buttonView?.layer.cornerRadius = 7 }
@@ -58,7 +80,7 @@ class DemoButton: KeyboardButtonView {
 
 // MARK: - Private button-specific KeyboardAction Extensions
 
-private extension KeyboardAction {
+extension KeyboardAction {
     func buttonColor(for viewController: KeyboardInputViewController) -> UIColor {
         let dark = useDarkAppearance(in: viewController)
         let asset = useDarkButton
@@ -129,6 +151,20 @@ private extension KeyboardAction {
         default: return UIImage(named: "cat5_key")
         }
     }
+    
+    func buttonSelectedCatImages(for keyboardType: KeyboardType) -> UIImage? {
+        switch keyboardType {
+        case .cat1_key: return UIImage(named: "cat1_key_sel")
+        case .cat2_key: return UIImage(named: "cat2_key_sel")
+        case .cat3_key: return UIImage(named: "cat3_key_sel")
+        case .cat4_key: return UIImage(named: "cat4_key_sel")
+        case .cat5_key: return UIImage(named: "cat5_key_sel")
+
+        default: return UIImage(named: "cat1_key_sel")
+        }
+    }
+
+    
 
     var buttonWidth: CGFloat {
         switch self {

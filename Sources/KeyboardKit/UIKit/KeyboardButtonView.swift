@@ -16,7 +16,7 @@ open class KeyboardButtonView: UIButton, KeyboardButton {
     
     public private(set) var action: KeyboardAction = .none
     public private(set) var secondaryAction: KeyboardAction?
-    public private(set) var keyboardAppearance: UIKeyboardAppearance = .default
+    public private(set) var keyboardAppearance: UIKeyboardAppearance = .light
     
     public var widthConstraint: NSLayoutConstraint?
     

@@ -30,7 +30,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "84670444234A709400355331"
-               BuildableName = "KeyboardKitDemo.app"
+               BuildableName = "Communiji.app"
                BlueprintName = "KeyboardKitDemo"
                ReferencedContainer = "container:KeyboardKit.xcodeproj">
             </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84670444234A709400355331"
-            BuildableName = "KeyboardKitDemo.app"
+            BuildableName = "Communiji.app"
             BlueprintName = "KeyboardKitDemo"
             ReferencedContainer = "container:KeyboardKit.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84670444234A709400355331"
-            BuildableName = "KeyboardKitDemo.app"
+            BuildableName = "Communiji.app"
             BlueprintName = "KeyboardKitDemo"
             ReferencedContainer = "container:KeyboardKit.xcodeproj">
          </BuildableReference>

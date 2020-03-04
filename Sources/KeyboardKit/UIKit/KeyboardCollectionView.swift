@@ -38,16 +38,22 @@ open class KeyboardCollectionView: UICollectionView, KeyboardStackViewComponent,
     
     // MARK: - Properties
     
-    public let actions: [KeyboardAction]
+    public var actions: [KeyboardAction]
     
     public let cellIdentifier = "Cell"
     
     public var heightConstraint: NSLayoutConstraint?
     
     
+    open func preRefresh() {
+        actions.removeAll()
+        collectionViewLayout.invalidateLayout()
+        reloadData()
+    }
     // MARK: - Public Functions
     
     open func refresh() {
+        
         collectionViewLayout.invalidateLayout()
         reloadData()
     }

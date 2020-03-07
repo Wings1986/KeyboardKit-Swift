@@ -48,7 +48,7 @@ open class KeyboardButtonRowCollectionView: KeyboardCollectionView, PagedKeyboar
     
     func setup() {
         delegate = self
-        isPagingEnabled = true
+        isPagingEnabled = false
         height = configuration.totalHeight
         collectionViewLayout = Layout(rowHeight: configuration.rowHeight)
     }

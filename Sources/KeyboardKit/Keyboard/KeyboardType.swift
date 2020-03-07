@@ -24,6 +24,7 @@ public enum KeyboardType: Equatable {
     email,
     emojis,
     images,
+    history_key,
     cat1_key,
     cat2_key,
     cat3_key,

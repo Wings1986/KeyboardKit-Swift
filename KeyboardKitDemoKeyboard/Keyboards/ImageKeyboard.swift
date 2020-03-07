@@ -29,7 +29,17 @@ struct ImageKeyboard: DemoKeyboard {
     }
 
     let actions: [KeyboardAction] = [
-        .image(description: "zoom", keyboardImageName: "zoom", imageName: "zoom"),
+        .image(description: "color", keyboardImageName: "color", imageName: "color"),
+        .image(description: "download", keyboardImageName: "download", imageName: "download"),
+        .image(description: "edit", keyboardImageName: "edit", imageName: "edit"),
+        .image(description: "cancel", keyboardImageName: "cancel", imageName: "cancel"),
+        .image(description: "bubble", keyboardImageName: "bubble", imageName: "bubble"),
+        .image(description: "box", keyboardImageName: "box", imageName: "box"),
+
+        .image(description: "favorite", keyboardImageName: "favorite", imageName: "favorite"),
+        .image(description: "globe", keyboardImageName: "globe", imageName: "globe"),
+        .image(description: "help", keyboardImageName: "help", imageName: "help"),
+        .image(description: "idea", keyboardImageName: "idea", imageName: "idea"),
     ]
 
     let actionsCat1: [KeyboardAction] = [
@@ -101,7 +111,6 @@ struct ImageKeyboard: DemoKeyboard {
         .image(description: "act13", keyboardImageName: "act13_small", imageName: "act13"),
         .image(description: "act14", keyboardImageName: "act14_small", imageName: "act14"),
         .image(description: "act15", keyboardImageName: "act15_small", imageName: "act15"),
-        
     ]
 
     let actionsCat3: [KeyboardAction] = [
@@ -149,18 +158,40 @@ struct ImageKeyboard: DemoKeyboard {
     ]
 
     let actionsCat5: [KeyboardAction] = [
-     .image(description: "travel_1", keyboardImageName: "travel_1_small", imageName: "travel_1"),
-     .image(description: "travel_2", keyboardImageName: "travel_2_small", imageName: "travel_2"),
-     .image(description: "travel_3", keyboardImageName: "travel_3_small", imageName: "travel_3"),
-     .image(description: "travel_4", keyboardImageName: "travel_4_small", imageName: "travel_4"),
-     .image(description: "travel_5", keyboardImageName: "travel_5_small", imageName: "travel_5"),
-     .image(description: "travel_6", keyboardImageName: "travel_6_small", imageName: "travel_6"),
-     .image(description: "travel_7", keyboardImageName: "travel_7_small", imageName: "travel_7"),
-     .image(description: "travel_8", keyboardImageName: "travel_8_small", imageName: "travel_8"),
-     .image(description: "travel_9", keyboardImageName: "travel_9_small", imageName: "travel_9"),
-     .image(description: "travel_10", keyboardImageName: "travel_10_small", imageName: "travel_10"),
-     .image(description: "travel_11", keyboardImageName: "travel_11_small", imageName: "travel_11"),
+        .image(description: "travel_1", keyboardImageName: "travel_1_small", imageName: "travel_1"),
+        .image(description: "travel_2", keyboardImageName: "travel_2_small", imageName: "travel_2"),
+        .image(description: "travel_3", keyboardImageName: "travel_3_small", imageName: "travel_3"),
+        .image(description: "travel_4", keyboardImageName: "travel_4_small", imageName: "travel_4"),
+        .image(description: "travel_5", keyboardImageName: "travel_5_small", imageName: "travel_5"),
+        .image(description: "travel_6", keyboardImageName: "travel_6_small", imageName: "travel_6"),
+        .image(description: "travel_7", keyboardImageName: "travel_7_small", imageName: "travel_7"),
+        .image(description: "travel_8", keyboardImageName: "travel_8_small", imageName: "travel_8"),
+        .image(description: "travel_9", keyboardImageName: "travel_9_small", imageName: "travel_9"),
+        .image(description: "travel_10", keyboardImageName: "travel_10_small", imageName: "travel_10"),
+        .image(description: "travel_11", keyboardImageName: "travel_11_small", imageName: "travel_11"),
     ]
+
+    func getHistoryImages(_ stringKeys: [String: String]) -> [KeyboardAction] {
+        var actions = [KeyboardAction]()
+        let array = Array(stringKeys.keys)
+        let newArray = Array(array.sorted(by: before(value1:value2:)))
+
+        for key in newArray {
+            let newKey = key.components(separatedBy: "_-_")
+            actions.append(.image(description: "\(newKey[1])", keyboardImageName: "\(newKey[1])", imageName: "\(stringKeys[key] ?? "")"))
+        }
+        return actions
+    }
+
+    func before(value1: String, value2: String) -> Bool {
+        // One string is alphabetically first.
+        // ... True means value1 precedes value2.
+        let newKey = value1.components(separatedBy: "_-_")
+        let newKey2 = value2.components(separatedBy: "_-_")
+        let val1Value = Int(newKey[0])
+        let val2Value = Int(newKey2[0])
+        return val1Value! > val2Value!;
+    }
 
     let bottomActions: KeyboardActionRow
 }

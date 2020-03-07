@@ -47,41 +47,64 @@ class DemoKeyboardActionHandler: StandardKeyboardActionHandler {
     override func tapAction(for action: KeyboardAction, view: UIView) -> GestureAction? {
         switch action {
         case .character: return handleCharacter(action, for: view)
-        case let .image(_, _, imageName): return { [weak self] in self?.copyImage(UIImage(named: imageName)!) }
+        case let .image(_, keyImage, imageName):
+            do {
+            print("\(keyImage)")
+                EmojiHistoryModel.shared.updateHistory(key: keyImage, mainImage: imageName)
+            return {
+                
+                [weak self] in self?.copyImage(UIImage(named: imageName)!)
+                
+                
+            }
+        }
         case .shift: return switchToUppercaseKeyboard
         case .shiftDown: return switchToLowercaseKeyboard
         case .space: return handleSpace(for: view)
         case let .switchToKeyboard(type): return { [weak self] in
 
-                self?.demoViewController?.tabButton?.buttonImageMain.image = self?.demoViewController?.tabButton?.currentAction!.buttonCatImages(for: (self?.demoViewController?.tabButton!.currentKeyboard)!)
-            
+            self?.demoViewController?.tabButton?.buttonImageMain.image = self?.demoViewController?.tabButton?.currentAction!.buttonCatImages(for: (self?.demoViewController?.tabButton!.currentKeyboard)!)
+
             let demoButton: DemoButton = view as! DemoButton
             self?.demoViewController?.tabButton = demoButton
-            
+
             self?.demoViewController?.tabButton?.buttonImageMain.image = self?.demoViewController?.tabButton?.currentAction!.buttonSelectedCatImages(for: type)
-            
+
             self?.demoViewController?.keyboardCollection?.preRefresh()
             let keyboard = ImageKeyboard(in: (self?.demoViewController)!)
+
+            if type == .history_key {
+                let actionsNew = keyboard.getHistoryImages(EmojiHistoryModel.shared.getHistory())
+                self?.demoViewController?.keyboardCollection?.actions =
+                    actionsNew
+                self?.demoViewController?.keyboardCollection?.reloadSetup(actionsNew)
+                self?.demoViewController?.labelCategory?.text = "   HISTORY"
+            }
+
             if type == .cat1_key {
                 self?.demoViewController?.keyboardCollection?.actions = keyboard.actionsCat1
                 self?.demoViewController?.keyboardCollection?.reloadSetup(keyboard.actionsCat1)
-                
+                self?.demoViewController?.labelCategory?.text = "   AUNTIES & UNCLES"
             }
             if type == .cat2_key {
                 self?.demoViewController?.keyboardCollection?.actions = keyboard.actionsCat2
                 self?.demoViewController?.keyboardCollection?.reloadSetup(keyboard.actionsCat2)
+                self?.demoViewController?.labelCategory?.text = "   ACTIVITIES"
             }
             if type == .cat3_key {
                 self?.demoViewController?.keyboardCollection?.actions = keyboard.actionsCat3
                 self?.demoViewController?.keyboardCollection?.reloadSetup(keyboard.actionsCat3)
+                self?.demoViewController?.labelCategory?.text = "   FOOD & DRINK"
             }
             if type == .cat4_key {
                 self?.demoViewController?.keyboardCollection?.actions = keyboard.actionsCat4
                 self?.demoViewController?.keyboardCollection?.reloadSetup(keyboard.actionsCat4)
+                self?.demoViewController?.labelCategory?.text = "   OBJECTS"
             }
             if type == .cat5_key {
                 self?.demoViewController?.keyboardCollection?.actions = keyboard.actionsCat5
                 self?.demoViewController?.keyboardCollection?.reloadSetup(keyboard.actionsCat5)
+                self?.demoViewController?.labelCategory?.text = "   TRAVEL & PLACES"
             }
 
             self?.demoViewController?.keyboardCollection?.refresh()

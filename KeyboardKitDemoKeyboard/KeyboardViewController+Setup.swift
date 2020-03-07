@@ -58,8 +58,8 @@ extension KeyboardViewController {
     func setupImageKeyboard(for size: CGSize, type: Int) {
         let keyboard = ImageKeyboard(in: self)
         let isLandscape = size.width > 400
-        let rowsPerPage = isLandscape ? 3 : 4
-        let buttonsPerRow = isLandscape ? 7 : 5
+        let rowsPerPage = isLandscape ? 4 : 6
+        let buttonsPerRow = isLandscape ? 11 : 9
         
         var actions: [KeyboardAction] = keyboard.actions
         if type == 1 {
@@ -78,17 +78,35 @@ extension KeyboardViewController {
             actions = keyboard.actionsCat5
         }
         
-        let config = KeyboardButtonRowCollectionView.Configuration(rowHeight: 60, rowsPerPage: rowsPerPage, buttonsPerRow: buttonsPerRow)
+        let config = KeyboardButtonRowCollectionView.Configuration(rowHeight: 40, rowsPerPage: rowsPerPage, buttonsPerRow: buttonsPerRow)
         let view = KeyboardButtonRowCollectionView(actions: actions, configuration: config) { [unowned self] in
             self.button(for: $0)
             
         }
-        let bottom = buttonRow(for: keyboard.bottomActions, distribution: .fillProportionally)
-        bottom.addBorder(.bottom, color: .black, thickness: 0.5)
-        self.keyboardCollection = view
         
-        keyboardStackView.addArrangedSubview(bottom)
+        let bottom = buttonRow(for: keyboard.bottomActions, distribution: .fillProportionally)
+        //bottom.addBorder(.bottom, color: .black, thickness: 0.5)
+        let label = UILabel(frame: CGRect(x: 20, y: 10, width: 320, height: 50))
+        label.text = "   AUNTIES & UNCLES"
+        label.font = UIFont(name: "Helvetica-Bold", size: 14.0)
+        label.textColor = .darkGray
+        let labelUP = UILabel(frame: CGRect(x: 20, y: 10, width: 320, height: 50))
+        labelUP.text = " "
+        labelUP.font = UIFont(name: "Helvetica-Bold", size: 8.0)
+        labelUP.textColor = .darkGray
+        let labelDown = UILabel(frame: CGRect(x: 20, y: 10, width: 320, height: 50))
+        labelDown.text = " "
+        labelDown.font = UIFont(name: "Helvetica-Bold", size: 8.0)
+        labelDown.textColor = .darkGray
+
+        keyboardStackView.addArrangedSubview(labelUP)
+        keyboardStackView.addArrangedSubview(label)
+        keyboardStackView.addArrangedSubview(labelDown)
+        self.keyboardCollection = view
+        self.labelCategory = label
         keyboardStackView.addArrangedSubview(view)
+        keyboardStackView.addArrangedSubview(bottom)
+        
     }
     
     

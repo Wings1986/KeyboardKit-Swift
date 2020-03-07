@@ -21,16 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		1891FA66240E6C1400A0CB18 /* cat2_key.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FA5C240E6C1400A0CB18 /* cat2_key.png */; };
-		1891FA67240E6C1400A0CB18 /* cat3_key.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FA5D240E6C1400A0CB18 /* cat3_key.png */; };
-		1891FA68240E6C1400A0CB18 /* cat1_key.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FA5E240E6C1400A0CB18 /* cat1_key.png */; };
-		1891FA6E240E6C1400A0CB18 /* cat5_key.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FA64240E6C1400A0CB18 /* cat5_key.png */; };
-		1891FA6F240E6C1400A0CB18 /* cat4_key.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FA65240E6C1400A0CB18 /* cat4_key.png */; };
-		1891FA70240E6C1900A0CB18 /* cat2_key.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FA5C240E6C1400A0CB18 /* cat2_key.png */; };
-		1891FA71240E6C1C00A0CB18 /* cat3_key.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FA5D240E6C1400A0CB18 /* cat3_key.png */; };
-		1891FA72240E6C2600A0CB18 /* cat1_key.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FA5E240E6C1400A0CB18 /* cat1_key.png */; };
-		1891FA78240E6C2600A0CB18 /* cat5_key.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FA64240E6C1400A0CB18 /* cat5_key.png */; };
-		1891FA79240E6C2600A0CB18 /* cat4_key.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FA65240E6C1400A0CB18 /* cat4_key.png */; };
+		187B42582413E310007F4974 /* EmojiHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B42572413E310007F4974 /* EmojiHistoryModel.swift */; };
+		187B42592413E5AF007F4974 /* EmojiHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B42572413E310007F4974 /* EmojiHistoryModel.swift */; };
 		1891FB6B240EDBC600A0CB18 /* object_3_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FA7C240EDBC500A0CB18 /* object_3_small.png */; };
 		1891FB6C240EDBC600A0CB18 /* object_12_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FA7D240EDBC500A0CB18 /* object_12_small.png */; };
 		1891FB6D240EDBC600A0CB18 /* object_5_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FA7E240EDBC500A0CB18 /* object_5_small.png */; };
@@ -496,16 +488,6 @@
 		1891FD3E240FC6CE00A0CB18 /* Facebook Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FD39240FC6CD00A0CB18 /* Facebook Icon.png */; };
 		1891FD3F240FC6CE00A0CB18 /* border.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FD3A240FC6CE00A0CB18 /* border.png */; };
 		1891FD40240FC6CE00A0CB18 /* Communiji Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FD3B240FC6CE00A0CB18 /* Communiji Logo.png */; };
-		1891FD462410018500A0CB18 /* cat5_key_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FD412410018400A0CB18 /* cat5_key_sel.png */; };
-		1891FD472410018500A0CB18 /* cat2_key_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FD422410018500A0CB18 /* cat2_key_sel.png */; };
-		1891FD482410018500A0CB18 /* cat3_key_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FD432410018500A0CB18 /* cat3_key_sel.png */; };
-		1891FD492410018500A0CB18 /* cat4_key_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FD442410018500A0CB18 /* cat4_key_sel.png */; };
-		1891FD4A2410018500A0CB18 /* cat1_key_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FD452410018500A0CB18 /* cat1_key_sel.png */; };
-		1891FD4B2410159D00A0CB18 /* cat1_key_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FD452410018500A0CB18 /* cat1_key_sel.png */; };
-		1891FD4C2410159D00A0CB18 /* cat2_key_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FD422410018500A0CB18 /* cat2_key_sel.png */; };
-		1891FD4D2410159D00A0CB18 /* cat3_key_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FD432410018500A0CB18 /* cat3_key_sel.png */; };
-		1891FD4E2410159D00A0CB18 /* cat4_key_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FD442410018500A0CB18 /* cat4_key_sel.png */; };
-		1891FD4F2410159D00A0CB18 /* cat5_key_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FD412410018400A0CB18 /* cat5_key_sel.png */; };
 		84086E30235587DC0030D95A /* KeyboardViewController+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84086E2F235587DC0030D95A /* KeyboardViewController+Buttons.swift */; };
 		84086E32235588200030D95A /* KeyboardViewController+Autocomplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84086E31235588200030D95A /* KeyboardViewController+Autocomplete.swift */; };
 		84086E3423558C0F0030D95A /* KeyboardViewController+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84086E3323558C0F0030D95A /* KeyboardViewController+Setup.swift */; };
@@ -524,7 +506,7 @@
 		8467044F234A709400355331 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8467044D234A709400355331 /* Main.storyboard */; };
 		84670454234A709500355331 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84670452234A709500355331 /* LaunchScreen.storyboard */; };
 		84670460234A711100355331 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467045F234A711100355331 /* KeyboardViewController.swift */; };
-		84670464234A711100355331 /* KeyboardKitDemoKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8467045D234A711100355331 /* KeyboardKitDemoKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		84670464234A711100355331 /* CommunijiKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8467045D234A711100355331 /* CommunijiKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		84670488234A718C00355331 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467046A234A718C00355331 /* Assets.swift */; };
 		84670489234A718C00355331 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8467046B234A718C00355331 /* Colors.xcassets */; };
 		8467048A234A718C00355331 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8467046C234A718C00355331 /* Images.xcassets */; };
@@ -752,7 +734,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				84670464234A711100355331 /* KeyboardKitDemoKeyboard.appex in Embed App Extensions */,
+				84670464234A711100355331 /* CommunijiKeyboard.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -782,11 +764,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1891FA5C240E6C1400A0CB18 /* cat2_key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat2_key.png; sourceTree = "<group>"; };
-		1891FA5D240E6C1400A0CB18 /* cat3_key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat3_key.png; sourceTree = "<group>"; };
-		1891FA5E240E6C1400A0CB18 /* cat1_key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat1_key.png; sourceTree = "<group>"; };
-		1891FA64240E6C1400A0CB18 /* cat5_key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat5_key.png; sourceTree = "<group>"; };
-		1891FA65240E6C1400A0CB18 /* cat4_key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat4_key.png; sourceTree = "<group>"; };
+		187B42572413E310007F4974 /* EmojiHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiHistoryModel.swift; sourceTree = "<group>"; };
 		1891FA7C240EDBC500A0CB18 /* object_3_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = object_3_small.png; sourceTree = "<group>"; };
 		1891FA7D240EDBC500A0CB18 /* object_12_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = object_12_small.png; sourceTree = "<group>"; };
 		1891FA7E240EDBC500A0CB18 /* object_5_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = object_5_small.png; sourceTree = "<group>"; };
@@ -1022,11 +1000,6 @@
 		1891FD39240FC6CD00A0CB18 /* Facebook Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook Icon.png"; sourceTree = "<group>"; };
 		1891FD3A240FC6CE00A0CB18 /* border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border.png; sourceTree = "<group>"; };
 		1891FD3B240FC6CE00A0CB18 /* Communiji Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Communiji Logo.png"; sourceTree = "<group>"; };
-		1891FD412410018400A0CB18 /* cat5_key_sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat5_key_sel.png; sourceTree = "<group>"; };
-		1891FD422410018500A0CB18 /* cat2_key_sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat2_key_sel.png; sourceTree = "<group>"; };
-		1891FD432410018500A0CB18 /* cat3_key_sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat3_key_sel.png; sourceTree = "<group>"; };
-		1891FD442410018500A0CB18 /* cat4_key_sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat4_key_sel.png; sourceTree = "<group>"; };
-		1891FD452410018500A0CB18 /* cat1_key_sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat1_key_sel.png; sourceTree = "<group>"; };
 		84086E2F235587DC0030D95A /* KeyboardViewController+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardViewController+Buttons.swift"; sourceTree = "<group>"; };
 		84086E31235588200030D95A /* KeyboardViewController+Autocomplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardViewController+Autocomplete.swift"; sourceTree = "<group>"; };
 		84086E3323558C0F0030D95A /* KeyboardViewController+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardViewController+Setup.swift"; sourceTree = "<group>"; };
@@ -1048,7 +1021,7 @@
 		8467044E234A709400355331 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84670453234A709500355331 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84670455234A709500355331 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8467045D234A711100355331 /* KeyboardKitDemoKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = KeyboardKitDemoKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8467045D234A711100355331 /* CommunijiKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CommunijiKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8467045F234A711100355331 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		84670461234A711100355331 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8467046A234A718C00355331 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
@@ -1244,23 +1217,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1891FA5B240E6C1400A0CB18 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				1891FD452410018500A0CB18 /* cat1_key_sel.png */,
-				1891FD422410018500A0CB18 /* cat2_key_sel.png */,
-				1891FD432410018500A0CB18 /* cat3_key_sel.png */,
-				1891FD442410018500A0CB18 /* cat4_key_sel.png */,
-				1891FD412410018400A0CB18 /* cat5_key_sel.png */,
-				1891FA5C240E6C1400A0CB18 /* cat2_key.png */,
-				1891FA5D240E6C1400A0CB18 /* cat3_key.png */,
-				1891FA5E240E6C1400A0CB18 /* cat1_key.png */,
-				1891FA64240E6C1400A0CB18 /* cat5_key.png */,
-				1891FA65240E6C1400A0CB18 /* cat4_key.png */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
 		1891FA7A240EDBC500A0CB18 /* AllImages */ = {
 			isa = PBXGroup;
 			children = (
@@ -1660,7 +1616,6 @@
 			isa = PBXGroup;
 			children = (
 				1891FA7A240EDBC500A0CB18 /* AllImages */,
-				1891FA5B240E6C1400A0CB18 /* Categories */,
 				8467046E234A718C00355331 /* info.png */,
 				8467046F234A718C00355331 /* rss.png */,
 				84670470234A718C00355331 /* warning.png */,
@@ -1720,6 +1675,7 @@
 				84623A9B235615600024987B /* ImageKeyboard.swift */,
 				846704AC234A725300355331 /* NumericKeyboard.swift */,
 				846704AE234A725300355331 /* SymbolicKeyboard.swift */,
+				187B42572413E310007F4974 /* EmojiHistoryModel.swift */,
 			);
 			path = Keyboards;
 			sourceTree = "<group>";
@@ -1910,7 +1866,7 @@
 				"KeyboardKit::KeyboardKitTests::Product" /* KeyboardKitTests.xctest */,
 				"KeyboardKit::KeyboardKit::Product" /* KeyboardKit.framework */,
 				84670445234A709400355331 /* Communiji.app */,
-				8467045D234A711100355331 /* KeyboardKitDemoKeyboard.appex */,
+				8467045D234A711100355331 /* CommunijiKeyboard.appex */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -2146,7 +2102,7 @@
 			);
 			name = KeyboardKitDemoKeyboard;
 			productName = KeyboardKitDemoKeyboard;
-			productReference = 8467045D234A711100355331 /* KeyboardKitDemoKeyboard.appex */;
+			productReference = 8467045D234A711100355331 /* CommunijiKeyboard.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		"KeyboardKit::KeyboardKit" /* KeyboardKit */ = {
@@ -2343,7 +2299,6 @@
 				1891FC3E240EDBC600A0CB18 /* food_4_small.png in Resources */,
 				1891FC1F240EDBC600A0CB18 /* act15.png in Resources */,
 				1891FC4D240EDBC600A0CB18 /* food_7_small.png in Resources */,
-				1891FD462410018500A0CB18 /* cat5_key_sel.png in Resources */,
 				8467048E234A718C00355331 /* delicious.png in Resources */,
 				1891FC4C240EDBC600A0CB18 /* food_12_small.png in Resources */,
 				1891FBA3240EDBC600A0CB18 /* travel_4_small.png in Resources */,
@@ -2351,7 +2306,6 @@
 				1891FBB1240EDBC600A0CB18 /* aunt_20_small.png in Resources */,
 				1891FBAC240EDBC600A0CB18 /* aunt_1_small.png in Resources */,
 				1891FC06240EDBC600A0CB18 /* aunt_12.png in Resources */,
-				1891FD492410018500A0CB18 /* cat4_key_sel.png in Resources */,
 				1891FBA6240EDBC600A0CB18 /* aunt_7_small.png in Resources */,
 				1891FB97240EDBC600A0CB18 /* object_9.png in Resources */,
 				1891FC11240EDBC600A0CB18 /* food_3.png in Resources */,
@@ -2365,7 +2319,6 @@
 				1891FBD7240EDBC600A0CB18 /* aunt_22.png in Resources */,
 				1891FB9F240EDBC600A0CB18 /* travel_3_small.png in Resources */,
 				8467048F234A718C00355331 /* note.png in Resources */,
-				1891FA66240E6C1400A0CB18 /* cat2_key.png in Resources */,
 				1891FBB5240EDBC600A0CB18 /* aunt_27_small.png in Resources */,
 				1891FD3C240FC6CE00A0CB18 /* neuropol.ttf in Resources */,
 				1891FBC1240EDBC600A0CB18 /* aunt_29_small.png in Resources */,
@@ -2376,7 +2329,6 @@
 				1891FB6E240EDBC600A0CB18 /* object_14_small.png in Resources */,
 				1891FC21240EDBC600A0CB18 /* act13.png in Resources */,
 				1891FBF6240EDBC600A0CB18 /* aunt_17.png in Resources */,
-				1891FA6E240E6C1400A0CB18 /* cat5_key.png in Resources */,
 				1891FC3B240EDBC600A0CB18 /* act3_small.png in Resources */,
 				1891FB75240EDBC600A0CB18 /* object_9_small.png in Resources */,
 				1891FC17240EDBC600A0CB18 /* food_1.png in Resources */,
@@ -2390,7 +2342,6 @@
 				8467049D234A718C00355331 /* video.png in Resources */,
 				1891FB7D240EDBC600A0CB18 /* travel_3.png in Resources */,
 				846704A0234A718C00355331 /* trash.png in Resources */,
-				1891FD472410018500A0CB18 /* cat2_key_sel.png in Resources */,
 				1891FBD8240EDBC600A0CB18 /* aunt_36.png in Resources */,
 				1891FBBF240EDBC600A0CB18 /* aunt_5_small.png in Resources */,
 				1891FC14240EDBC600A0CB18 /* food_2.png in Resources */,
@@ -2403,11 +2354,9 @@
 				1891FC2D240EDBC600A0CB18 /* act6_small.png in Resources */,
 				1891FC25240EDBC600A0CB18 /* act7.png in Resources */,
 				1891FBF3240EDBC600A0CB18 /* aunt_45.png in Resources */,
-				1891FD4A2410018500A0CB18 /* cat1_key_sel.png in Resources */,
 				1891FC2A240EDBC600A0CB18 /* act2.png in Resources */,
 				84670489234A718C00355331 /* Colors.xcassets in Resources */,
 				1891FBB3240EDBC600A0CB18 /* aunt_44_small.png in Resources */,
-				1891FA67240E6C1400A0CB18 /* cat3_key.png in Resources */,
 				1891FC43240EDBC600A0CB18 /* food_5_small.png in Resources */,
 				84670494234A718C00355331 /* label.png in Resources */,
 				1891FBA7240EDBC600A0CB18 /* aunt_32_small.png in Resources */,
@@ -2415,7 +2364,6 @@
 				1891FB88240EDBC600A0CB18 /* object_7.png in Resources */,
 				1891FBCC240EDBC600A0CB18 /* aunt_28_small.png in Resources */,
 				1891FC19240EDBC600A0CB18 /* food_20.png in Resources */,
-				1891FA68240E6C1400A0CB18 /* cat1_key.png in Resources */,
 				1891FBA2240EDBC600A0CB18 /* travel_2_small.png in Resources */,
 				1891FC08240EDBC600A0CB18 /* aunt_13.png in Resources */,
 				1891FB84240EDBC600A0CB18 /* travel_7.png in Resources */,
@@ -2454,7 +2402,6 @@
 				1891FC49240EDBC600A0CB18 /* food_20_small.png in Resources */,
 				1891FBFD240EDBC600A0CB18 /* aunt_6.png in Resources */,
 				1891FC2B240EDBC600A0CB18 /* act9.png in Resources */,
-				1891FD482410018500A0CB18 /* cat3_key_sel.png in Resources */,
 				1891FBB6240EDBC600A0CB18 /* aunt_33_small.png in Resources */,
 				1891FBCB240EDBC600A0CB18 /* aunt_4_small.png in Resources */,
 				1891FC3A240EDBC600A0CB18 /* act13_small.png in Resources */,
@@ -2501,7 +2448,6 @@
 				1891FBC5240EDBC600A0CB18 /* aunt_24_small.png in Resources */,
 				1891FBA5240EDBC600A0CB18 /* aunt_45_small.png in Resources */,
 				84670454234A709500355331 /* LaunchScreen.storyboard in Resources */,
-				1891FA6F240E6C1400A0CB18 /* cat4_key.png in Resources */,
 				1891FC39240EDBC600A0CB18 /* act5_small.png in Resources */,
 				1891FB7C240EDBC600A0CB18 /* object_6_small.png in Resources */,
 				1891FC3D240EDBC600A0CB18 /* food_11_small.png in Resources */,
@@ -2543,7 +2489,6 @@
 				1891FC74240EE78300A0CB18 /* travel_5_small.png in Resources */,
 				846704D0234A728400355331 /* globe.png in Resources */,
 				1891FC52240EE76A00A0CB18 /* travel_2.png in Resources */,
-				1891FD4F2410159D00A0CB18 /* cat5_key_sel.png in Resources */,
 				1891FCDA240EE7AB00A0CB18 /* aunt_12.png in Resources */,
 				1891FCCC240EE7AB00A0CB18 /* aunt_5.png in Resources */,
 				846704C3234A728400355331 /* warning.png in Resources */,
@@ -2569,7 +2514,6 @@
 				1891FC6E240EE78300A0CB18 /* travel_10_small.png in Resources */,
 				1891FC9D240EE79800A0CB18 /* aunt_22_small.png in Resources */,
 				1891FC7B240EE79800A0CB18 /* aunt_32_small.png in Resources */,
-				1891FA71240E6C1C00A0CB18 /* cat3_key.png in Resources */,
 				1891FC5E240EE77900A0CB18 /* object_4.png in Resources */,
 				1891FC96240EE79800A0CB18 /* aunt_11_small.png in Resources */,
 				1891FD30240EE8D900A0CB18 /* object_1_small.png in Resources */,
@@ -2589,7 +2533,6 @@
 				1891FC5D240EE77900A0CB18 /* object_6.png in Resources */,
 				1891FD2D240EE8D900A0CB18 /* object_4_small.png in Resources */,
 				1891FC78240EE78300A0CB18 /* travel_9_small.png in Resources */,
-				1891FA70240E6C1900A0CB18 /* cat2_key.png in Resources */,
 				1891FCDF240EE7B700A0CB18 /* food_15.png in Resources */,
 				1891FCF4240EE7C200A0CB18 /* act12.png in Resources */,
 				1891FC72240EE78300A0CB18 /* travel_6_small.png in Resources */,
@@ -2618,7 +2561,6 @@
 				1891FC6D240EE77900A0CB18 /* object_17.png in Resources */,
 				1891FCF0240EE7B700A0CB18 /* food_19.png in Resources */,
 				1891FC8F240EE79800A0CB18 /* aunt_38_small.png in Resources */,
-				1891FD4E2410159D00A0CB18 /* cat4_key_sel.png in Resources */,
 				1891FCBE240EE7AB00A0CB18 /* aunt_26.png in Resources */,
 				846704D8234A728400355331 /* favorite.png in Resources */,
 				1891FCA6240EE79800A0CB18 /* aunt_40_small.png in Resources */,
@@ -2637,7 +2579,6 @@
 				1891FD1E240EE7DB00A0CB18 /* food_15_small.png in Resources */,
 				1891FC98240EE79800A0CB18 /* aunt_30_small.png in Resources */,
 				1891FC85240EE79800A0CB18 /* aunt_20_small.png in Resources */,
-				1891FD4B2410159D00A0CB18 /* cat1_key_sel.png in Resources */,
 				1891FC70240EE78300A0CB18 /* travel_7_small.png in Resources */,
 				1891FC55240EE76A00A0CB18 /* travel_4.png in Resources */,
 				1891FC53240EE76A00A0CB18 /* travel_1.png in Resources */,
@@ -2667,7 +2608,6 @@
 				1891FD18240EE7DB00A0CB18 /* food_16_small.png in Resources */,
 				1891FC6C240EE77900A0CB18 /* object_16.png in Resources */,
 				1891FCD7240EE7AB00A0CB18 /* aunt_3.png in Resources */,
-				1891FA72240E6C2600A0CB18 /* cat1_key.png in Resources */,
 				1891FD21240EE7DB00A0CB18 /* food_7_small.png in Resources */,
 				846704D4234A728400355331 /* idea.png in Resources */,
 				1891FD02240EE7CC00A0CB18 /* act10_small.png in Resources */,
@@ -2676,7 +2616,6 @@
 				1891FCFF240EE7C200A0CB18 /* act9.png in Resources */,
 				1891FC9B240EE79800A0CB18 /* aunt_3_small.png in Resources */,
 				1891FC68240EE77900A0CB18 /* object_8.png in Resources */,
-				1891FD4D2410159D00A0CB18 /* cat3_key_sel.png in Resources */,
 				1891FD09240EE7CC00A0CB18 /* act12_small.png in Resources */,
 				1891FCDD240EE7B700A0CB18 /* food_5.png in Resources */,
 				1891FD0E240EE7CC00A0CB18 /* act13_small.png in Resources */,
@@ -2737,7 +2676,6 @@
 				846704B5234A725300355331 /* DemoButton.xib in Resources */,
 				846704BF234A727F00355331 /* Colors.xcassets in Resources */,
 				1891FCF8240EE7C200A0CB18 /* act6.png in Resources */,
-				1891FA78240E6C2600A0CB18 /* cat5_key.png in Resources */,
 				1891FCAD240EE7AB00A0CB18 /* aunt_37.png in Resources */,
 				1891FCA7240EE79800A0CB18 /* aunt_2_small.png in Resources */,
 				1891FD2B240EE8D900A0CB18 /* object_2_small.png in Resources */,
@@ -2776,7 +2714,6 @@
 				1891FD2C240EE8D900A0CB18 /* object_15_small.png in Resources */,
 				1891FD14240EE7DB00A0CB18 /* food_9_small.png in Resources */,
 				1891FC57240EE76A00A0CB18 /* travel_6.png in Resources */,
-				1891FD4C2410159D00A0CB18 /* cat2_key_sel.png in Resources */,
 				846704D2234A728400355331 /* base.png in Resources */,
 				1891FD1D240EE7DB00A0CB18 /* food_20_small.png in Resources */,
 				1891FD22240EE7DB00A0CB18 /* food_19_small.png in Resources */,
@@ -2790,7 +2727,6 @@
 				1891FCE4240EE7B700A0CB18 /* food_7.png in Resources */,
 				1891FD29240EE8D900A0CB18 /* object_8_small.png in Resources */,
 				1891FCE3240EE7B700A0CB18 /* food_16.png in Resources */,
-				1891FA79240E6C2600A0CB18 /* cat4_key.png in Resources */,
 				1891FC5F240EE77900A0CB18 /* object_18.png in Resources */,
 				1891FC81240EE79800A0CB18 /* aunt_43_small.png in Resources */,
 				1891FCBC240EE7AB00A0CB18 /* aunt_9.png in Resources */,
@@ -2835,6 +2771,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187B42592413E5AF007F4974 /* EmojiHistoryModel.swift in Sources */,
 				8467044C234A709400355331 /* ViewController.swift in Sources */,
 				84670448234A709400355331 /* AppDelegate.swift in Sources */,
 				84670488234A718C00355331 /* Assets.swift in Sources */,
@@ -2855,6 +2792,7 @@
 				846704BA234A725300355331 /* DemoKeyboard.swift in Sources */,
 				846704B4234A725300355331 /* DemoButton.swift in Sources */,
 				84623A9C235615600024987B /* ImageKeyboard.swift in Sources */,
+				187B42582413E310007F4974 /* EmojiHistoryModel.swift in Sources */,
 				846704B9234A725300355331 /* SymbolicKeyboard.swift in Sources */,
 				84086E32235588200030D95A /* KeyboardViewController+Autocomplete.swift in Sources */,
 				84670460234A711100355331 /* KeyboardViewController.swift in Sources */,
@@ -3081,8 +3019,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 76Q45LB3F7;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -3108,7 +3046,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.planetsouq;
 				PRODUCT_NAME = Communiji;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = devPlanetSouq;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3148,8 +3086,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = 76Q45LB3F7;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -3171,7 +3109,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.planetsouq;
 				PRODUCT_NAME = Communiji;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = devPlanetSouq;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3209,8 +3147,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 76Q45LB3F7;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -3236,8 +3174,8 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.planetsouq.widget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PRODUCT_NAME = CommunijiKeyboard;
+				PROVISIONING_PROFILE_SPECIFIER = devPlanetsouqWidget;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
@@ -3276,8 +3214,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = 76Q45LB3F7;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -3299,8 +3237,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.planetsouq.widget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PRODUCT_NAME = CommunijiKeyboard;
+				PROVISIONING_PROFILE_SPECIFIER = devPlanetsouqWidget;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

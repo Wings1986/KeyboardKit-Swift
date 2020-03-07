@@ -103,7 +103,7 @@ open class KeyboardButtonRowCollectionView: KeyboardCollectionView, PagedKeyboar
             super.init()
             minimumInteritemSpacing = 0
             minimumLineSpacing = 0
-            scrollDirection = .horizontal
+            scrollDirection = .vertical
         }
         
         required init?(coder aDecoder: NSCoder) {

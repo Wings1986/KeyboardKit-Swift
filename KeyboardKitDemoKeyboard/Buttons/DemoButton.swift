@@ -26,15 +26,18 @@ class DemoButton: KeyboardButtonView {
 
         DispatchQueue.main.async {
             self.buttonImageMain?.image = action.buttonImage
+            self.buttonImageMain.contentMode = .scaleAspectFit
+            
         }
 
         switch action {
         case let .switchToKeyboard(type):
-            if  type == .cat2_key || type == .cat3_key || type == .cat4_key || type == .cat5_key {
+            if type == .history_key || type == .cat2_key || type == .cat3_key || type == .cat4_key || type == .cat5_key {
                 
                 DispatchQueue.main.async {
                     self.currentKeyboard = type
                     self.buttonImageMain?.image = action.buttonCatImages(for: type)
+                    self.buttonImageMain.contentMode = .center
                 }
             }
             else if type == .cat1_key
@@ -42,14 +45,16 @@ class DemoButton: KeyboardButtonView {
                 DispatchQueue.main.async {
                     self.currentKeyboard = type
                     self.buttonImageMain?.image = action.buttonSelectedCatImages(for: type)
+                    self.buttonImageMain.contentMode = .center
                     let demo = viewController as? KeyboardViewController
                     demo?.tabButton = self
                     
                 }
             }
-        case .switchKeyboard:
+        case .backspace:
             DispatchQueue.main.async {
                 self.buttonImageMain?.image = action.buttonImage
+                self.buttonImageMain.contentMode = .center
             }
             break
 
@@ -104,7 +109,7 @@ extension KeyboardAction {
     var buttonImage: UIImage? {
         switch self {
         case .image(_, let imageName, _): return UIImage(named: imageName)
-
+        case .backspace: return Asset.Images.Buttons.backspace.image
         case .switchKeyboard: return Asset.Images.Buttons.switchKeyboard.image
         default: return nil
         }
@@ -142,6 +147,7 @@ extension KeyboardAction {
 
     func buttonCatImages(for keyboardType: KeyboardType) -> UIImage? {
         switch keyboardType {
+        case .history_key: return UIImage(named: "history_key")
         case .cat1_key: return UIImage(named: "cat1_key")
         case .cat2_key: return UIImage(named: "cat2_key")
         case .cat3_key: return UIImage(named: "cat3_key")
@@ -154,6 +160,7 @@ extension KeyboardAction {
     
     func buttonSelectedCatImages(for keyboardType: KeyboardType) -> UIImage? {
         switch keyboardType {
+        case .history_key: return UIImage(named: "history_key_sel")
         case .cat1_key: return UIImage(named: "cat1_key_sel")
         case .cat2_key: return UIImage(named: "cat2_key_sel")
         case .cat3_key: return UIImage(named: "cat3_key_sel")
@@ -169,9 +176,9 @@ extension KeyboardAction {
     var buttonWidth: CGFloat {
         switch self {
         case .none: return 10
-        case .shift, .shiftDown, .backspace: return 60
+        case .shift, .shiftDown: return 40
         case .space: return 100
-        default: return 50
+        default: return 35
         }
     }
 

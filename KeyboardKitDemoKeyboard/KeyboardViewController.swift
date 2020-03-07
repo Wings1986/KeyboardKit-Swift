@@ -93,6 +93,7 @@ class KeyboardViewController: KeyboardInputViewController {
     var tabButton: DemoButton?
     var keyBoardTypeCurrent: KeyboardType?
     var keyboardCollection : KeyboardButtonRowCollectionView?
+    var labelCategory: UILabel?
     
     // MARK: - Autocomplete
     

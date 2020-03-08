@@ -179,13 +179,15 @@ private extension Array where Element == KeyboardAction {
         var i = 1
         var tempSize = 0
         while tempSize < actions.count {
-            tempSize = tempSize + (configuration.buttonsPerRow * i)
+            tempSize = (configuration.buttonsPerRow * i)
             i = i + 1
         }
-
-        while actions.count % tempSize > 0 {
-            actions.append(.none)
+        if tempSize > 0 {
+            while actions.count % tempSize > 0 {
+                actions.append(.none)
+            }
         }
+        
         return actions.batched(withBatchSize: configuration.buttonsPerRow)
     }
 }

@@ -58,7 +58,7 @@ extension KeyboardViewController {
     func setupImageKeyboard(for size: CGSize, type: Int) {
         let keyboard = ImageKeyboard(in: self)
         let isLandscape = size.width > 400
-        let rowsPerPage = isLandscape ? 4 : 6
+        let rowsPerPage = isLandscape ? 5 : 6
         let buttonsPerRow = 9
         
         var actions: [KeyboardAction] = keyboard.actions

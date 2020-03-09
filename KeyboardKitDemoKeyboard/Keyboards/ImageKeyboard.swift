@@ -111,6 +111,12 @@ struct ImageKeyboard: DemoKeyboard {
         .image(description: "act13", keyboardImageName: "act13_small", imageName: "act13"),
         .image(description: "act14", keyboardImageName: "act14_small", imageName: "act14"),
         .image(description: "act15", keyboardImageName: "act15_small", imageName: "act15"),
+        .image(description: "act16", keyboardImageName: "act16_small", imageName: "act16"),
+        .image(description: "act17", keyboardImageName: "act17_small", imageName: "act17"),
+        .image(description: "act18", keyboardImageName: "act18_small", imageName: "act18"),
+        .image(description: "act19", keyboardImageName: "act19_small", imageName: "act19"),
+        .image(description: "act20", keyboardImageName: "act20_small", imageName: "act20"),
+        .image(description: "act21", keyboardImageName: "act21_small", imageName: "act21"),
     ]
 
     let actionsCat3: [KeyboardAction] = [

@@ -428,6 +428,9 @@
 		1891FD3E240FC6CE00A0CB18 /* Facebook Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FD39240FC6CD00A0CB18 /* Facebook Icon.png */; };
 		1891FD3F240FC6CE00A0CB18 /* border.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FD3A240FC6CE00A0CB18 /* border.png */; };
 		1891FD40240FC6CE00A0CB18 /* Communiji Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FD3B240FC6CE00A0CB18 /* Communiji Logo.png */; };
+		4507126E2425D07600A395C8 /* KeyboardKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "KeyboardKit::KeyboardKit::Product" /* KeyboardKit.framework */; };
+		4507126F2425D07600A395C8 /* KeyboardKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "KeyboardKit::KeyboardKit::Product" /* KeyboardKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		450712712425D10200A395C8 /* KeyboardKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "KeyboardKit::KeyboardKit::Product" /* KeyboardKit.framework */; };
 		455F48A52415E5CF00914B43 /* act14.png in Resources */ = {isa = PBXBuildFile; fileRef = 455F487A2415E5CF00914B43 /* act14.png */; };
 		455F48A62415E5CF00914B43 /* act15.png in Resources */ = {isa = PBXBuildFile; fileRef = 455F487B2415E5CF00914B43 /* act15.png */; };
 		455F48A72415E5CF00914B43 /* act20.png in Resources */ = {isa = PBXBuildFile; fileRef = 455F487C2415E5CF00914B43 /* act20.png */; };
@@ -599,10 +602,6 @@
 		846704D8234A728400355331 /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 84670485234A718C00355331 /* favorite.png */; };
 		846704D9234A728400355331 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 84670486234A718C00355331 /* refresh.png */; };
 		846704DA234A728400355331 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 84670487234A718C00355331 /* image.png */; };
-		8467050C234A745A00355331 /* KeyboardKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "KeyboardKit::KeyboardKit::Product" /* KeyboardKit.framework */; };
-		8467050D234A745A00355331 /* KeyboardKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "KeyboardKit::KeyboardKit::Product" /* KeyboardKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		84670511234A745E00355331 /* KeyboardKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "KeyboardKit::KeyboardKit::Product" /* KeyboardKit.framework */; };
-		84670512234A745E00355331 /* KeyboardKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "KeyboardKit::KeyboardKit::Product" /* KeyboardKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		847060002355A18700B2B2A8 /* HapticFeedbackConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84705FFF2355A18700B2B2A8 /* HapticFeedbackConfiguration.swift */; };
 		847060032355A2A900B2B2A8 /* HapticFeedbackConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847060012355A26A00B2B2A8 /* HapticFeedbackConfigurationTests.swift */; };
 		847060052355A5D900B2B2A8 /* KeyboardGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847060042355A5D900B2B2A8 /* KeyboardGesture.swift */; };
@@ -714,6 +713,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		45639BA82425C5C70053D1B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "KeyboardKit::KeyboardKit";
+			remoteInfo = KeyboardKit;
+		};
+		45639BAA2425C5DF0053D1B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "KeyboardKit::KeyboardKit";
+			remoteInfo = KeyboardKit;
+		};
 		84670423234A696700355331 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -735,23 +748,20 @@
 			remoteGlobalIDString = 8467045C234A711100355331;
 			remoteInfo = KeyboardKitDemoKeyboard;
 		};
-		8467050E234A745A00355331 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "KeyboardKit::KeyboardKit";
-			remoteInfo = KeyboardKit;
-		};
-		84670513234A745E00355331 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "KeyboardKit::KeyboardKit";
-			remoteInfo = KeyboardKit;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		450712702425D07600A395C8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4507126F2425D07600A395C8 /* KeyboardKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84670468234A711100355331 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -761,28 +771,6 @@
 				84670464234A711100355331 /* CommunijiKeyboard.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84670510234A745A00355331 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				8467050D234A745A00355331 /* KeyboardKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84670515234A745E00355331 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				84670512234A745E00355331 /* KeyboardKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -1220,7 +1208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8467050C234A745A00355331 /* KeyboardKit.framework in Frameworks */,
+				4507126E2425D07600A395C8 /* KeyboardKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1228,7 +1216,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84670511234A745E00355331 /* KeyboardKit.framework in Frameworks */,
+				450712712425D10200A395C8 /* KeyboardKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2121,13 +2109,14 @@
 				84670442234A709400355331 /* Frameworks */,
 				84670443234A709400355331 /* Resources */,
 				84670468234A711100355331 /* Embed App Extensions */,
-				84670510234A745A00355331 /* Embed Frameworks */,
+				45639BB12425CE170053D1B1 /* ShellScript */,
+				450712702425D07600A395C8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				45639BA92425C5C70053D1B1 /* PBXTargetDependency */,
 				84670463234A711100355331 /* PBXTargetDependency */,
-				8467050F234A745A00355331 /* PBXTargetDependency */,
 			);
 			name = KeyboardKitDemo;
 			productName = KeyboardKitDemo;
@@ -2141,12 +2130,12 @@
 				84670459234A711100355331 /* Sources */,
 				8467045A234A711100355331 /* Frameworks */,
 				8467045B234A711100355331 /* Resources */,
-				84670515234A745E00355331 /* Embed Frameworks */,
+				45639BB22425CE9F0053D1B1 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				84670514234A745E00355331 /* PBXTargetDependency */,
+				45639BAB2425C5DF0053D1B1 /* PBXTargetDependency */,
 			);
 			name = KeyboardKitDemoKeyboard;
 			productName = KeyboardKitDemoKeyboard;
@@ -2818,6 +2807,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		45639BB12425CE170053D1B1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nEMBEDDED_EXTENSION_PLUGIN_PATH=\"$TARGET_BUILD_DIR/$PLUGINS_FOLDER_PATH/<widget bundle name>.appex/Frameworks\"\nif [[ -d \"$EMBEDDED_EXTENSION_PLUGIN_PATH\" ]]; then\n    rm -fr \"$EMBEDDED_EXTENSION_PLUGIN_PATH\"\nfi\n";
+		};
+		45639BB22425CE9F0053D1B1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nEMBEDDED_EXTENSION_PLUGIN_PATH=\"$TARGET_BUILD_DIR/$PLUGINS_FOLDER_PATH/<widget bundle name>.appex/Frameworks\"\nif [[ -d \"$EMBEDDED_EXTENSION_PLUGIN_PATH\" ]]; then\n    rm -fr \"$EMBEDDED_EXTENSION_PLUGIN_PATH\"\nfi\n";
+		};
 		84670428234A6B2E00355331 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -3010,20 +3033,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		45639BA92425C5C70053D1B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "KeyboardKit::KeyboardKit" /* KeyboardKit */;
+			targetProxy = 45639BA82425C5C70053D1B1 /* PBXContainerItemProxy */;
+		};
+		45639BAB2425C5DF0053D1B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "KeyboardKit::KeyboardKit" /* KeyboardKit */;
+			targetProxy = 45639BAA2425C5DF0053D1B1 /* PBXContainerItemProxy */;
+		};
 		84670463234A711100355331 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8467045C234A711100355331 /* KeyboardKitDemoKeyboard */;
 			targetProxy = 84670462234A711100355331 /* PBXContainerItemProxy */;
-		};
-		8467050F234A745A00355331 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "KeyboardKit::KeyboardKit" /* KeyboardKit */;
-			targetProxy = 8467050E234A745A00355331 /* PBXContainerItemProxy */;
-		};
-		84670514234A745E00355331 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "KeyboardKit::KeyboardKit" /* KeyboardKit */;
-			targetProxy = 84670513234A745E00355331 /* PBXContainerItemProxy */;
 		};
 		OBJ_316 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3091,9 +3114,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 76Q45LB3F7;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = GMRNBDYAXM;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -3114,11 +3138,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.planetsouq;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hbconsulting.communiji;
 				PRODUCT_NAME = Communiji;
-				PROVISIONING_PROFILE_SPECIFIER = devPlanetSouq;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3158,10 +3183,11 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = 76Q45LB3F7;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = GMRNBDYAXM;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -3177,11 +3203,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.planetsouq;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hbconsulting.communiji;
 				PRODUCT_NAME = Communiji;
-				PROVISIONING_PROFILE_SPECIFIER = devPlanetSouq;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3219,9 +3246,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 76Q45LB3F7;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = GMRNBDYAXM;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -3243,11 +3271,12 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.planetsouq.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hbconsulting.communiji.keyboardDemo;
 				PRODUCT_NAME = CommunijiKeyboard;
-				PROVISIONING_PROFILE_SPECIFIER = devPlanetsouqWidget;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
@@ -3286,10 +3315,11 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = 76Q45LB3F7;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = GMRNBDYAXM;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -3306,11 +3336,12 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.planetsouq.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hbconsulting.communiji.keyboardDemo;
 				PRODUCT_NAME = CommunijiKeyboard;
-				PROVISIONING_PROFILE_SPECIFIER = devPlanetsouqWidget;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3324,8 +3355,9 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 76Q45LB3F7;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GMRNBDYAXM;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3337,10 +3369,11 @@
 					"$(inherited)",
 					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
 				);
+				MARKETING_VERSION = 1.0;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = KeyboardKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hbconsulting.communiji.KeyboardKit;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3358,8 +3391,9 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 76Q45LB3F7;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GMRNBDYAXM;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3371,10 +3405,11 @@
 					"$(inherited)",
 					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
 				);
+				MARKETING_VERSION = 1.0;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = KeyboardKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hbconsulting.communiji.KeyboardKit;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3482,6 +3517,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GMRNBDYAXM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -3499,6 +3538,8 @@
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = KeyboardKitTests;
@@ -3510,6 +3551,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GMRNBDYAXM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -3527,6 +3572,8 @@
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = KeyboardKitTests;

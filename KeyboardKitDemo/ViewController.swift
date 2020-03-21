@@ -20,6 +20,15 @@ class ViewController: UIViewController {
             UIApplication.shared.open(url)
         }
     }
+    @IBAction func installKeyboardTapped(_ sender: Any) {
+//       if let url = NSURL(string: UIApplication.openSettingsURLString) as URL? {
+//            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+//        }
+        if let url = NSURL(string: "App-prefs:root=General&path=Keyboard") as URL? {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+     
+    }
     @IBOutlet weak var textView: UITextView? {
         didSet { textView?.contentInset = UIEdgeInsets(top: 0, left: -4, bottom: 0, right: 0) }
     }

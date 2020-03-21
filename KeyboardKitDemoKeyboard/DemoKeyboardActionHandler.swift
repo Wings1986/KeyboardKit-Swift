@@ -142,7 +142,7 @@ private extension DemoKeyboardActionHandler {
         guard let input = inputViewController as? KeyboardViewController else { return }
         guard input.hasFullAccess else { return alert("You must enable full access to copy images.") }
         guard image.copyToPasteboard() else { return alert("The image could not be copied.") }
-        alert("Copied to pasteboard!")
+        alert("Copied to clipboard!")
     }
 
     func handleCharacter(_ action: KeyboardAction, for view: UIView) -> GestureAction {

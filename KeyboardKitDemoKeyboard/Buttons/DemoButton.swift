@@ -197,7 +197,7 @@ extension KeyboardAction {
 
     func useDarkAppearance(in viewController: KeyboardInputViewController) -> Bool {
         let appearance = viewController.textDocumentProxy.keyboardAppearance ?? .default
-        return appearance == .dark
+        return false //appearance == .dark
     }
 
     var useDarkButton: Bool {

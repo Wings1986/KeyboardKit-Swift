@@ -38,7 +38,7 @@ class DemoKeyboardActionHandler: StandardKeyboardActionHandler {
 
     override func longPressAction(for action: KeyboardAction, view: UIView) -> GestureAction? {
         switch action {
-        case let .image(_, _, imageName): return { [weak self] in self?.saveImage(UIImage(named: imageName)!) }
+        // case let .image(_, _, imageName): return { [weak self] in self?.saveImage(UIImage(named: imageName)!) }
         case .shift: return switchToCapsLockedKeyboard
         default: return super.longPressAction(for: action, view: view)
         }

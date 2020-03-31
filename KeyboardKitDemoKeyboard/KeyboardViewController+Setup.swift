@@ -89,7 +89,15 @@ extension KeyboardViewController {
         let label = UILabel(frame: CGRect(x: 20, y: 10, width: 320, height: 50))
         label.text = "   AUNTIES & UNCLES"
         label.font = UIFont(name: "Helvetica-Bold", size: 14.0)
-        label.textColor = .darkGray
+        
+        let appearance = textDocumentProxy.keyboardAppearance ?? .default
+        if appearance == .dark {
+            label.textColor = .white
+        } else {
+            label.textColor = .darkGray
+        }
+        
+        
         let labelUP = UILabel(frame: CGRect(x: 20, y: 10, width: 320, height: 50))
         labelUP.text = " "
         labelUP.font = UIFont(name: "Helvetica-Bold", size: 8.0)

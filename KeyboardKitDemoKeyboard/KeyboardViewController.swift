@@ -86,6 +86,8 @@ class KeyboardViewController: KeyboardInputViewController {
     // MARK: - Properties
     
     let alerter = ToastAlert()
+    let dialoger = ToastDialog()
+    
     
     var keyboardType = KeyboardType.cat1_key {
         didSet { setupKeyboard() }

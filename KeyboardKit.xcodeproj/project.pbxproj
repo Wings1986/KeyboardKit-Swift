@@ -515,6 +515,10 @@
 		455F48F62415E6F100914B43 /* act5_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 455F48A22415E5CF00914B43 /* act5_small.png */; };
 		455F48F72415E6F100914B43 /* act13_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 455F48A32415E5CF00914B43 /* act13_small.png */; };
 		455F48F82415E6F100914B43 /* act3_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 455F48A42415E5CF00914B43 /* act3_small.png */; };
+		45913C69243304D500B74A4A /* KeyboardDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45913C68243304D500B74A4A /* KeyboardDialog.swift */; };
+		45913C6B243304F200B74A4A /* ToastDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45913C6A243304F200B74A4A /* ToastDialog.swift */; };
+		45913C6D2433418100B74A4A /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45913C6C2433418100B74A4A /* CustomView.xib */; };
+		45913C6F2433434000B74A4A /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45913C6E2433434000B74A4A /* CustomView.swift */; };
 		84086E30235587DC0030D95A /* KeyboardViewController+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84086E2F235587DC0030D95A /* KeyboardViewController+Buttons.swift */; };
 		84086E32235588200030D95A /* KeyboardViewController+Autocomplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84086E31235588200030D95A /* KeyboardViewController+Autocomplete.swift */; };
 		84086E3423558C0F0030D95A /* KeyboardViewController+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84086E3323558C0F0030D95A /* KeyboardViewController+Setup.swift */; };
@@ -1024,6 +1028,10 @@
 		455F48A22415E5CF00914B43 /* act5_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = act5_small.png; sourceTree = "<group>"; };
 		455F48A32415E5CF00914B43 /* act13_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = act13_small.png; sourceTree = "<group>"; };
 		455F48A42415E5CF00914B43 /* act3_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = act3_small.png; sourceTree = "<group>"; };
+		45913C68243304D500B74A4A /* KeyboardDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDialog.swift; sourceTree = "<group>"; };
+		45913C6A243304F200B74A4A /* ToastDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastDialog.swift; sourceTree = "<group>"; };
+		45913C6C2433418100B74A4A /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		45913C6E2433434000B74A4A /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		84086E2F235587DC0030D95A /* KeyboardViewController+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardViewController+Buttons.swift"; sourceTree = "<group>"; };
 		84086E31235588200030D95A /* KeyboardViewController+Autocomplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardViewController+Autocomplete.swift"; sourceTree = "<group>"; };
 		84086E3323558C0F0030D95A /* KeyboardViewController+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardViewController+Setup.swift"; sourceTree = "<group>"; };
@@ -1570,6 +1578,15 @@
 			path = ActSmall;
 			sourceTree = "<group>";
 		};
+		45913C672433047B00B74A4A /* AccessDialog */ = {
+			isa = PBXGroup;
+			children = (
+				45913C68243304D500B74A4A /* KeyboardDialog.swift */,
+				45913C6A243304F200B74A4A /* ToastDialog.swift */,
+			);
+			path = AccessDialog;
+			sourceTree = "<group>";
+		};
 		84623A892355DE240024987B /* Audio */ = {
 			isa = PBXGroup;
 			children = (
@@ -1619,6 +1636,7 @@
 		8467045E234A711100355331 /* KeyboardKitDemoKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				45913C672433047B00B74A4A /* AccessDialog */,
 				846704B1234A725300355331 /* Autocomplete */,
 				846704A7234A725300355331 /* Buttons */,
 				846704AB234A725300355331 /* Keyboards */,
@@ -1628,6 +1646,8 @@
 				84086E31235588200030D95A /* KeyboardViewController+Autocomplete.swift */,
 				84086E2F235587DC0030D95A /* KeyboardViewController+Buttons.swift */,
 				84086E3323558C0F0030D95A /* KeyboardViewController+Setup.swift */,
+				45913C6C2433418100B74A4A /* CustomView.xib */,
+				45913C6E2433434000B74A4A /* CustomView.swift */,
 			);
 			path = KeyboardKitDemoKeyboard;
 			sourceTree = "<group>";
@@ -2567,6 +2587,7 @@
 				455F48F12415E6F100914B43 /* act2_small.png in Resources */,
 				455F48F22415E6F100914B43 /* act15_small.png in Resources */,
 				455F48F32415E6F100914B43 /* act21_small.png in Resources */,
+				45913C6D2433418100B74A4A /* CustomView.xib in Resources */,
 				455F48F42415E6F100914B43 /* act8_small.png in Resources */,
 				455F48F52415E6F100914B43 /* act19_small.png in Resources */,
 				455F48F62415E6F100914B43 /* act5_small.png in Resources */,
@@ -2885,9 +2906,12 @@
 				846704B6234A725300355331 /* DemoAutocompleteLabel.swift in Sources */,
 				846704BC234A725300355331 /* DemoAutocompleteSuggestionProvider.swift in Sources */,
 				846704BA234A725300355331 /* DemoKeyboard.swift in Sources */,
+				45913C6F2433434000B74A4A /* CustomView.swift in Sources */,
 				846704B4234A725300355331 /* DemoButton.swift in Sources */,
 				84623A9C235615600024987B /* ImageKeyboard.swift in Sources */,
+				45913C69243304D500B74A4A /* KeyboardDialog.swift in Sources */,
 				187B42582413E310007F4974 /* EmojiHistoryModel.swift in Sources */,
+				45913C6B243304F200B74A4A /* ToastDialog.swift in Sources */,
 				846704B9234A725300355331 /* SymbolicKeyboard.swift in Sources */,
 				84086E32235588200030D95A /* KeyboardViewController+Autocomplete.swift in Sources */,
 				84670460234A711100355331 /* KeyboardViewController.swift in Sources */,
@@ -3116,7 +3140,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = GMRNBDYAXM;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -3186,7 +3210,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = GMRNBDYAXM;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

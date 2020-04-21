@@ -93,7 +93,8 @@ struct ImageKeyboard: DemoKeyboard {
         .image(description: "aunt_48", keyboardImageName: "aunt_48_small", imageName: "aunt_48"),
         .image(description: "aunt_49", keyboardImageName: "aunt_49_small", imageName: "aunt_49"),
         .image(description: "aunt_50", keyboardImageName: "aunt_50_small", imageName: "aunt_50"),
-        .image(description: "act18", keyboardImageName: "act18_small", imageName: "act18"),
+        .image(description: "aunt_51", keyboardImageName: "aunt_51_small", imageName: "aunt_51"),
+        .image(description: "aunt_52", keyboardImageName: "aunt_52_small", imageName: "aunt_52"),
     ]
 
     let actionsCat2: [KeyboardAction] = [
@@ -113,11 +114,6 @@ struct ImageKeyboard: DemoKeyboard {
         .image(description: "act14", keyboardImageName: "act14_small", imageName: "act14"),
         .image(description: "act15", keyboardImageName: "act15_small", imageName: "act15"),
         .image(description: "act16", keyboardImageName: "act16_small", imageName: "act16"),
-        .image(description: "act17", keyboardImageName: "act17_small", imageName: "act17"),
-//        .image(description: "act18", keyboardImageName: "act18_small", imageName: "act18"),
-        .image(description: "act19", keyboardImageName: "act19_small", imageName: "act19"),
-        .image(description: "act20", keyboardImageName: "act20_small", imageName: "act20"),
-        .image(description: "act21", keyboardImageName: "act21_small", imageName: "act21"),
     ]
 
     let actionsCat3: [KeyboardAction] = [
@@ -162,6 +158,11 @@ struct ImageKeyboard: DemoKeyboard {
         .image(description: "object_15", keyboardImageName: "object_15_small", imageName: "object_15"),
         .image(description: "object_16", keyboardImageName: "object_16_small", imageName: "object_16"),
         .image(description: "object_17", keyboardImageName: "object_17_small", imageName: "object_17"),
+        .image(description: "object_18", keyboardImageName: "object_18_small", imageName: "object_18"),
+        .image(description: "object_19", keyboardImageName: "object_19_small", imageName: "object_19"),
+        .image(description: "object_20", keyboardImageName: "object_20_small", imageName: "object_20"),
+        .image(description: "object_21", keyboardImageName: "object_21_small", imageName: "object_21"),
+        .image(description: "object_22", keyboardImageName: "object_22_small", imageName: "object_22"),
     ]
 
     let actionsCat5: [KeyboardAction] = [
@@ -176,6 +177,13 @@ struct ImageKeyboard: DemoKeyboard {
         .image(description: "travel_9", keyboardImageName: "travel_9_small", imageName: "travel_9"),
         .image(description: "travel_10", keyboardImageName: "travel_10_small", imageName: "travel_10"),
         .image(description: "travel_11", keyboardImageName: "travel_11_small", imageName: "travel_11"),
+        .image(description: "travel_12", keyboardImageName: "travel_12_small", imageName: "travel_12"),
+        .image(description: "travel_13", keyboardImageName: "travel_13_small", imageName: "travel_13"),
+        .image(description: "travel_14", keyboardImageName: "travel_14_small", imageName: "travel_14"),
+        .image(description: "travel_15", keyboardImageName: "travel_15_small", imageName: "travel_15"),
+        .image(description: "travel_16", keyboardImageName: "travel_16_small", imageName: "travel_16"),
+        .image(description: "travel_17", keyboardImageName: "travel_17_small", imageName: "travel_17"),
+        .image(description: "travel_18", keyboardImageName: "travel_18_small", imageName: "travel_18"),
     ]
 
     func getHistoryImages(_ stringKeys: [String: String]) -> [KeyboardAction] {
@@ -183,9 +191,16 @@ struct ImageKeyboard: DemoKeyboard {
         let array = Array(stringKeys.keys)
         let newArray = Array(array.sorted(by: before(value1:value2:)))
 
+        var count = 0
         for key in newArray {
             let newKey = key.components(separatedBy: "_-_")
             actions.append(.image(description: "\(newKey[1])", keyboardImageName: "\(newKey[1])", imageName: "\(stringKeys[key] ?? "")"))
+            
+            count += 1
+            
+            if count == 40 {
+                break;
+            }
         }
         return actions
     }

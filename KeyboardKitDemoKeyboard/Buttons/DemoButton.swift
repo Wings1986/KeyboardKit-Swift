@@ -153,7 +153,7 @@ extension KeyboardAction {
         case .cat3_key: return UIImage(named: "cat3_key")
         case .cat4_key: return UIImage(named: "cat4_key")
         case .cat5_key: return UIImage(named: "cat5_key")
-
+            
         default: return UIImage(named: "cat5_key")
         }
     }
@@ -197,7 +197,7 @@ extension KeyboardAction {
 
     func useDarkAppearance(in viewController: KeyboardInputViewController) -> Bool {
         let appearance = viewController.textDocumentProxy.keyboardAppearance ?? .default
-        return false //appearance == .dark
+        return appearance == .dark
     }
 
     var useDarkButton: Bool {

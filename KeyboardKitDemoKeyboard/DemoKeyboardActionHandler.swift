@@ -84,7 +84,7 @@ class DemoKeyboardActionHandler: StandardKeyboardActionHandler {
             if type == .cat1_key {
                 self?.demoViewController?.keyboardCollection?.actions = keyboard.actionsCat1
                 self?.demoViewController?.keyboardCollection?.reloadSetup(keyboard.actionsCat1)
-                self?.demoViewController?.labelCategory?.text = "   AUNTIES & UNCLES"
+                self?.demoViewController?.labelCategory?.text = "   EXPRESSIONS"
             }
             if type == .cat2_key {
                 self?.demoViewController?.keyboardCollection?.actions = keyboard.actionsCat2
@@ -99,7 +99,7 @@ class DemoKeyboardActionHandler: StandardKeyboardActionHandler {
             if type == .cat4_key {
                 self?.demoViewController?.keyboardCollection?.actions = keyboard.actionsCat4
                 self?.demoViewController?.keyboardCollection?.reloadSetup(keyboard.actionsCat4)
-                self?.demoViewController?.labelCategory?.text = "   OBJECTS"
+                self?.demoViewController?.labelCategory?.text = "   OBJECTS & SYMBOLS"
             }
             if type == .cat5_key {
                 self?.demoViewController?.keyboardCollection?.actions = keyboard.actionsCat5
@@ -147,7 +147,7 @@ private extension DemoKeyboardActionHandler {
             return
         }
         guard image.copyToPasteboard() else { return alert("The image could not be copied.") }
-        alert("Copied to clipboard!")
+        alert("Communiji copied. Now paste it!")
     }
 
     func handleCharacter(_ action: KeyboardAction, for view: UIView) -> GestureAction {

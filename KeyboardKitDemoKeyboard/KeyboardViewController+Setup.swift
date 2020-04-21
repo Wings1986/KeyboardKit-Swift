@@ -87,7 +87,7 @@ extension KeyboardViewController {
         let bottom = buttonRow(for: keyboard.bottomActions, distribution: .fillProportionally)
         //bottom.addBorder(.bottom, color: .black, thickness: 0.5)
         let label = UILabel(frame: CGRect(x: 20, y: 10, width: 320, height: 50))
-        label.text = "   AUNTIES & UNCLES"
+        label.text = "   EXPRESSIONS"
         label.font = UIFont(name: "Helvetica-Bold", size: 14.0)
         
         let appearance = textDocumentProxy.keyboardAppearance ?? .default
@@ -96,6 +96,7 @@ extension KeyboardViewController {
         } else {
             label.textColor = .darkGray
         }
+//        label.textColor = .darkGray
         
         
         let labelUP = UILabel(frame: CGRect(x: 20, y: 10, width: 320, height: 50))
@@ -115,6 +116,13 @@ extension KeyboardViewController {
         keyboardStackView.addArrangedSubview(view)
         keyboardStackView.addArrangedSubview(bottom)
         
+        
+        if appearance == .dark {
+            self.view.backgroundColor = .black;
+        } else {
+            self.view.backgroundColor = .white;
+        }
+//        self.view.backgroundColor = .white;
     }
     
     

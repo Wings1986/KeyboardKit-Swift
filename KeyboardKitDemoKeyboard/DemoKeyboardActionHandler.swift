@@ -9,6 +9,7 @@
 import KeyboardKit
 import UIKit
 
+import Firebase
 /**
 
  This action handler inherits `StandardKeyboardActionHandler`
@@ -55,6 +56,13 @@ class DemoKeyboardActionHandler: StandardKeyboardActionHandler {
                 
                 [weak self] in self?.copyImage(UIImage(named: imageName)!)
                 
+                /* iGold
+                Analytics.logEvent(AnalyticsEventViewItem, parameters: [
+                                    AnalyticsParameterItemID: "ios-keyboard",
+                                    AnalyticsParameterItemName: "emoji",
+                                    AnalyticsParameterContentType: imageName
+                ])
+                 */
                 
             }
         }
@@ -140,14 +148,14 @@ private extension DemoKeyboardActionHandler {
 
     func copyImage(_ image: UIImage) {
         guard let input = inputViewController as? KeyboardViewController else { return }
-        guard input.hasFullAccess else {
-            //return alert("You must enable full access to copy images.")
-            guard let input = inputViewController as? KeyboardViewController else { return }
-            input.dialoger.addView(in: input.view)
-            return
-        }
+//        guard input.hasFullAccess else {
+//            //return alert("You must enable full access to copy images.")
+//            guard let input = inputViewController as? KeyboardViewController else { return }
+//            input.dialoger.addView(in: input.view)
+//            return
+//        }
         guard image.copyToPasteboard() else { return alert("The image could not be copied.") }
-        alert("Communiji copied. Now paste it!")
+        alert("Copied. Now paste it!")
     }
 
     func handleCharacter(_ action: KeyboardAction, for view: UIView) -> GestureAction {

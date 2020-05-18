@@ -9,6 +9,8 @@
 import UIKit
 import KeyboardKit
 
+import Firebase
+
 /**
  This demo app handles system actions as normal (e.g. change
  keyboard, space, new line etc.), injects strings and emojis
@@ -49,8 +51,26 @@ class KeyboardViewController: KeyboardInputViewController {
     
     // MARK: - View Controller Lifecycle
     
+
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+      super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+      
+        /* iGold
+        FirebaseApp.configure()
+        */
+    }
+    
+//    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+//        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+//
+//    }
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         keyboardActionHandler = DemoKeyboardActionHandler(inputViewController: self)
     }
     

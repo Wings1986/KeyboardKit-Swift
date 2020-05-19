@@ -19,7 +19,7 @@ protocol DemoKeyboard {}
 
 extension DemoKeyboard {
     static func bottomActions(leftmost: KeyboardAction, for vc: KeyboardViewController) -> KeyboardActionRow {
-        let actions = [imageAction(for: vc, catType: 0),imageAction(for: vc, catType: 1), imageAction(for: vc, catType: 2), imageAction(for: vc, catType: 3), imageAction(for: vc, catType: 4), imageAction(for: vc, catType: 5), .backspace]
+        let actions = [.switchKeyboard, imageAction(for: vc, catType: 0),imageAction(for: vc, catType: 1), imageAction(for: vc, catType: 2), imageAction(for: vc, catType: 3), imageAction(for: vc, catType: 4), imageAction(for: vc, catType: 5), .backspace]
         return  actions
     }
 }

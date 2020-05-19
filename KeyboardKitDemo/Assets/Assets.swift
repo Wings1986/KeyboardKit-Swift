@@ -33,7 +33,8 @@ internal enum Asset {
       internal static let backspace = ImageAsset(name: "Buttons/backspace")
       internal static let newline = ImageAsset(name: "Buttons/newline")
       internal static let space = ImageAsset(name: "Buttons/space")
-      internal static let switchKeyboard = ImageAsset(name: "Buttons/switchKeyboard")
+      //internal static let switchKeyboard = ImageAsset(name: "Buttons/switchKeyboard")
+        internal static let switchKeyboard = ImageAsset(name: "switch")
     }
   }
 }

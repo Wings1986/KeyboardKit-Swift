@@ -1,0 +1,59 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "grid-size" : "small"
+  },
+  "stickers" : [
+    {
+      "filename" : "act1.sticker"
+    },
+    {
+      "filename" : "act2.sticker"
+    },
+    {
+      "filename" : "act3.sticker"
+    },
+    {
+      "filename" : "act4.sticker"
+    },
+    {
+      "filename" : "act5.sticker"
+    },
+    {
+      "filename" : "act6.sticker"
+    },
+    {
+      "filename" : "act7.sticker"
+    },
+    {
+      "filename" : "act8.sticker"
+    },
+    {
+      "filename" : "act9.sticker"
+    },
+    {
+      "filename" : "act10.sticker"
+    },
+    {
+      "filename" : "act11.sticker"
+    },
+    {
+      "filename" : "act12.sticker"
+    },
+    {
+      "filename" : "act13.sticker"
+    },
+    {
+      "filename" : "act14.sticker"
+    },
+    {
+      "filename" : "act15.sticker"
+    },
+    {
+      "filename" : "act16.sticker"
+    }
+  ]
+}

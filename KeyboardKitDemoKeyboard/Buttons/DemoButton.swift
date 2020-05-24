@@ -37,6 +37,7 @@ class DemoButton: KeyboardButtonView {
                 DispatchQueue.main.async {
                     self.currentKeyboard = type
                     self.buttonImageMain?.image = action.buttonCatImages(for: type)
+                    
                     self.buttonImageMain.contentMode = .center
                 }
             }
@@ -44,7 +45,8 @@ class DemoButton: KeyboardButtonView {
             {
                 DispatchQueue.main.async {
                     self.currentKeyboard = type
-                    self.buttonImageMain?.image = action.buttonSelectedCatImages(for: type)
+                    self.buttonImageMain?.image = action.buttonCatImages(for: type)
+//                    self.buttonImageMain?.image = action.buttonSelectedCatImages(for: type)
                     self.buttonImageMain.contentMode = .center
                     let demo = viewController as? KeyboardViewController
                     demo?.tabButton = self
@@ -61,13 +63,15 @@ class DemoButton: KeyboardButtonView {
         default: print("")
         }
         textLabel?.font = action.buttonFont
-
+        textLabel?.text = action.buttonText
         textLabel?.textColor = action.tintColor(in: viewController)
         buttonView?.tintColor = action.tintColor(in: viewController)
+        buttonView?.backgroundColor = .white
         width = action.buttonWidth(for: distribution)
         applyShadow(.standardButtonShadow)
         currentAction = action
         currentCatButton = self
+        
     }
 
     var currentAction: KeyboardAction?
@@ -78,9 +82,10 @@ class DemoButton: KeyboardButtonView {
         didSet { buttonView?.layer.cornerRadius = 7 }
     }
 
-    @IBOutlet var textLabel: UILabel? {
-        didSet { textLabel?.text = "" }
-    }
+    @IBOutlet var textLabel: UILabel?
+//    {
+//        didSet { textLabel?.text = "" }
+//    }
 }
 
 // MARK: - Private button-specific KeyboardAction Extensions
@@ -117,7 +122,7 @@ extension KeyboardAction {
 
     var buttonText: String? {
         switch self {
-        case .backspace: return "⌫"
+        //case .backspace: return "⌫"
         case let .character(text): return text
         case .newLine: return "return"
         case .shift, .shiftDown: return "⇧"

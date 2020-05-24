@@ -29,6 +29,10 @@ private extension NumericKeyboard {
             .appending(bottomActions(leftmost: switchAction, for: viewController))
     }
     
+    static func bottomActions(leftmost: KeyboardAction, for vc: KeyboardViewController) -> KeyboardActionRow {
+        return [ switchAction, .switchToKeyboard(.cat1_key), .space, .character("."), .newLine ]
+    }
+    
     static let characters: [[String]] = [
         ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
         ["-", "/", ":", ";", "(", ")", "$", "&", "@", "\""],

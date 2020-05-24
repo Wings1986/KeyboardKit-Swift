@@ -33,6 +33,10 @@ private extension AlphabeticKeyboard {
             .appending(bottomActions(leftmost: switchAction, for: viewController))
     }
     
+    static func bottomActions(leftmost: KeyboardAction, for vc: KeyboardViewController) -> KeyboardActionRow {
+        return [ switchAction, .switchToKeyboard(.cat1_key), .space, .character("."), .newLine ]
+    }
+    
     static let characters: [[String]] = [
         ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
         ["a", "s", "d", "f", "g", "h", "j", "k", "l"],

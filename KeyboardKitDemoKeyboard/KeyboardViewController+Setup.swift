@@ -22,6 +22,7 @@ extension KeyboardViewController {
 
     func setupKeyboardAsync(for size: CGSize) {
         keyboardStackView.removeAllArrangedSubviews()
+        //setupAlphabeticKeyboard(uppercased: false)
         switch keyboardType {
         case let .alphabetic(uppercased): setupAlphabeticKeyboard(uppercased: uppercased)
         case .emojis: setupEmojiKeyboard(for: size)
@@ -62,6 +63,7 @@ extension KeyboardViewController {
         let buttonsPerRow = 8
         
         var actions: [KeyboardAction] = keyboard.actions
+                
         if type == 1 {
             actions = keyboard.actionsCat1
         }
@@ -87,7 +89,7 @@ extension KeyboardViewController {
         let bottom = buttonRow(for: keyboard.bottomActions, distribution: .fillProportionally)
         //bottom.addBorder(.bottom, color: .black, thickness: 0.5)
         let label = UILabel(frame: CGRect(x: 20, y: 10, width: 320, height: 50))
-        label.text = "   EXPRESSIONS"
+        label.text = labelCategory?.text ?? "   EXPRESSIONS"//"   EXPRESSIONS"
         label.font = UIFont(name: "Helvetica-Bold", size: 14.0)
         
         let appearance = textDocumentProxy.keyboardAppearance ?? .default
@@ -120,7 +122,7 @@ extension KeyboardViewController {
         if appearance == .dark {
             self.view.backgroundColor = .black;
         } else {
-            self.view.backgroundColor = .white;
+            self.view.backgroundColor = .clearTappable;
         }
 //        self.view.backgroundColor = .white;
     }

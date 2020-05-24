@@ -202,6 +202,7 @@ struct ImageKeyboard: DemoKeyboard {
                 break;
             }
         }
+        
         return actions
     }
 
@@ -220,6 +221,6 @@ struct ImageKeyboard: DemoKeyboard {
 
 private extension EmojiKeyboard {
     static var switchAction: KeyboardAction {
-        .switchToKeyboard(.cat1_key)
+        .switchToKeyboard(.alphabetic(uppercased: false))
     }
 }

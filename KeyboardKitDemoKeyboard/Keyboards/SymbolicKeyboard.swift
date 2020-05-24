@@ -29,6 +29,10 @@ private extension SymbolicKeyboard {
             .appending(bottomActions(leftmost: switchAction, for: viewController))
     }
     
+    static func bottomActions(leftmost: KeyboardAction, for vc: KeyboardViewController) -> KeyboardActionRow {
+        return [ switchAction, .switchToKeyboard(.cat1_key), .space, .character("."), .newLine ]
+    }
+    
     static var characters: [[String]] = [
         ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
         ["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "•"],

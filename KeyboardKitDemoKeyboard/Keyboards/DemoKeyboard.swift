@@ -19,8 +19,20 @@ protocol DemoKeyboard {}
 
 extension DemoKeyboard {
     static func bottomActions(leftmost: KeyboardAction, for vc: KeyboardViewController) -> KeyboardActionRow {
-        let actions = [.switchKeyboard, imageAction(for: vc, catType: 0),imageAction(for: vc, catType: 1), imageAction(for: vc, catType: 2), imageAction(for: vc, catType: 3), imageAction(for: vc, catType: 4), imageAction(for: vc, catType: 5), .backspace]
-        return  actions
+        
+        let actions = [
+            leftmost,
+            .switchKeyboard,
+            imageAction(for: vc, catType: 0),
+            imageAction(for: vc, catType: 1),
+            imageAction(for: vc, catType: 2),
+            imageAction(for: vc, catType: 3),
+            imageAction(for: vc, catType: 4),
+            imageAction(for: vc, catType: 5),
+            .backspace]
+        
+        return actions
+
     }
 }
 
@@ -32,26 +44,37 @@ private extension DemoKeyboard {
 
     static func imageAction(for vc: KeyboardViewController, catType: Int) -> KeyboardAction {
        
+        switch catType {
+            
+        case 0:  return .switchToKeyboard(.history_key)
+        case 1:  return .switchToKeyboard(.cat1_key)
+        case 2:  return .switchToKeyboard(.cat2_key)
+        case 3:  return .switchToKeyboard(.cat3_key)
+        case 4:  return .switchToKeyboard(.cat4_key)
+        case 5:  return .switchToKeyboard(.cat5_key)
+        default: return .switchToKeyboard(.images)
+            
+        }
         
-        if catType == 0 {
-            return .switchToKeyboard(.history_key)
-        }
-        if catType == 1 {
-            return .switchToKeyboard(.cat1_key)
-        }
-        if catType == 2 {
-            return .switchToKeyboard(.cat2_key)
-        }
-        if catType == 3 {
-            return .switchToKeyboard(.cat3_key)
-        }
-        if catType == 4 {
-            return .switchToKeyboard(.cat4_key)
-        }
-        if catType == 5 {
-            return .switchToKeyboard(.cat5_key)
-        }
-        return .switchToKeyboard(.images)
+//        if catType == 0 {
+//            return .switchToKeyboard(.history_key)
+//        }
+//        if catType == 1 {
+//            return .switchToKeyboard(.cat1_key)
+//        }
+//        if catType == 2 {
+//            return .switchToKeyboard(.cat2_key)
+//        }
+//        if catType == 3 {
+//            return .switchToKeyboard(.cat3_key)
+//        }
+//        if catType == 4 {
+//            return .switchToKeyboard(.cat4_key)
+//        }
+//        if catType == 5 {
+//            return .switchToKeyboard(.cat5_key)
+//        }
+//        return .switchToKeyboard(.images)
     }
 }
 

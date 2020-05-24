@@ -25,13 +25,15 @@ class DemoButton: KeyboardButtonView {
         case text
     }
     
+    static var currentActiveButton: KeyboardType = .cat1_key
     static var keyboardTypeEnabled: KeyboardTypeEnabled = .emoji
     
     public func setup(with action: KeyboardAction, in viewController: KeyboardInputViewController, distribution: UIStackView.Distribution = .fillEqually) {
+                        
         super.setup(with: action, in: viewController)
         backgroundColor = .clearTappable
-        //
-
+        
+    
         DispatchQueue.main.async {
             self.buttonImageMain?.image = action.buttonImage
             self.buttonImageMain.contentMode = .scaleAspectFit
@@ -40,34 +42,28 @@ class DemoButton: KeyboardButtonView {
 
         switch action {
         case let .switchToKeyboard(type):
-            
-            if type == .history_key || type == .cat2_key || type == .cat3_key || type == .cat4_key || type == .cat5_key {
+            if type == .history_key || type == .cat1_key || type == .cat2_key || type == .cat3_key || type == .cat4_key || type == .cat5_key {
                 
                 DispatchQueue.main.async {
                     self.currentKeyboard = type
-                    self.buttonImageMain?.image = action.buttonCatImages(for: type)
+                    if type == DemoButton.currentActiveButton {
+                        self.buttonImageMain?.image = action.buttonSelectedCatImages(for: type)
+                    } else {
+                         self.buttonImageMain?.image = action.buttonCatImages(for: type)
+                    }
                     
                     self.buttonImageMain.contentMode = .center
                 }
             }
-            else if type == .cat1_key
-            {
-                DispatchQueue.main.async {
-                    self.currentKeyboard = type
-                    self.buttonImageMain?.image = action.buttonCatImages(for: type)
-//                    self.buttonImageMain?.image = action.buttonSelectedCatImages(for: type)
-                    self.buttonImageMain.contentMode = .center
-                    let demo = viewController as? KeyboardViewController
-                    demo?.tabButton = self
-                    
-                }
-            }
+
+           
         case .backspace:
             DispatchQueue.main.async {
                 self.buttonImageMain?.image = action.buttonImage
                 self.buttonImageMain.contentMode = .center
             }
             break
+    
 
         default: print("")
         }

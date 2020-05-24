@@ -200,7 +200,7 @@ struct ImageKeyboard: DemoKeyboard {
             actions.append(.image(description: "\(newKey[1])", keyboardImageName: "\(newKey[1])", imageName: "\(stringKeys[key] ?? "")"))
             
             count += 1
-            
+                        
             if count == 40 {
                 break;
             }

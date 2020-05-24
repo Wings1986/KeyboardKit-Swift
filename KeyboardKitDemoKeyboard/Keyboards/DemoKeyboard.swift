@@ -79,8 +79,8 @@ private extension DemoKeyboard {
 }
 
 private extension Collection where Element == KeyboardAction {
-    var withoutImageActions: [KeyboardAction] {
-        filter { $0 != .switchToKeyboard(.emojis) }
-            .filter { $0 != .switchToKeyboard(.images) }
-    }
+//    var withoutImageActions: [KeyboardAction] {
+//        filter { $0 != .switchToKeyboard(.emojis) }
+//            .filter { $0 != .switchToKeyboard(.images) }
+//    }
 }

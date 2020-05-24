@@ -71,61 +71,77 @@ class DemoKeyboardActionHandler: StandardKeyboardActionHandler {
         case .space: return handleSpace(for: view)
         case let .switchToKeyboard(type): return { [weak self] in
 
-            self?.demoViewController?.tabButton?.buttonImageMain.image = self?.demoViewController?.tabButton?.currentAction!.buttonCatImages(for: (self?.demoViewController?.tabButton!.currentKeyboard)!)
-
+//            self?.demoViewController?.tabButton?.buttonImageMain.image = self?.demoViewController?.tabButton?.currentAction!.buttonCatImages(for: (self?.demoViewController?.tabButton!.currentKeyboard)!)
+            
             let demoButton: DemoButton = view as! DemoButton
             self?.demoViewController?.tabButton = demoButton
 
-            self?.demoViewController?.tabButton?.buttonImageMain.image = self?.demoViewController?.tabButton?.currentAction!.buttonSelectedCatImages(for: type)
+//            self?.demoViewController?.tabButton?.buttonImageMain.image = self?.demoViewController?.tabButton?.currentAction!.buttonSelectedCatImages(for: type)
             
+//            self?.demoViewController?.tabButton?.buttonImageMain.image = self?.demoViewController?.tabButton?.currentAction!.buttonCatImages(for: type)
 
             self?.demoViewController?.keyboardCollection?.preRefresh()
 //            let keyboard = ImageKeyboard(in: (self?.demoViewController)!)
-            
+       
+            DemoButton.currentActiveButton = type
+
             if type != .history_key {
                 self?.demoViewController?.keyboardType = type
             }
-            
-      
+                    
+                  
             if type == .history_key {
                 
-                let keyboard = ImageKeyboard(in: (self?.demoViewController)!)
-                //self?.demoViewController?.keyboardType = .history_key
-                let actionsNew = keyboard.getHistoryImages(EmojiHistoryModel.shared.getHistory())
-                self?.demoViewController?.keyboardCollection?.actions = actionsNew
-                self?.demoViewController?.keyboardCollection?.reloadSetup(actionsNew)
-                self?.demoViewController?.labelCategory?.text = "   HISTORY"
+                self?.demoViewController?.setupKeyboard()
+                
+                DispatchQueue.main.async {
+                    
+                    let keyboard = ImageKeyboard(in: (self?.demoViewController)!)
+                    let actionsNew = keyboard.getHistoryImages(EmojiHistoryModel.shared.getHistory())
+                    self?.demoViewController?.keyboardCollection?.actions = actionsNew
+                    self?.demoViewController?.keyboardCollection?.reloadSetup(actionsNew)
+                    self?.demoViewController?.labelCategory?.text = "   HISTORY"
+                    //DemoButton.currentActiveButton = .history_key
+                    
+                }
+                
             }
-
+            
+    
             if type == .cat1_key {
                 //self?.demoViewController?.keyboardType = .cat1_key
 //                self?.demoViewController?.keyboardCollection?.actions = keyboard.actionsCat1
 //                self?.demoViewController?.keyboardCollection?.reloadSetup(keyboard.actionsCat1)
                 self?.demoViewController?.labelCategory?.text = "   EXPRESSIONS"
+                //DemoButton.currentActiveButton = .cat1_key
             }
             if type == .cat2_key {
                 //self?.demoViewController?.keyboardType = .cat2_key
 //                self?.demoViewController?.keyboardCollection?.actions = keyboard.actionsCat2
 //                self?.demoViewController?.keyboardCollection?.reloadSetup(keyboard.actionsCat2)
                 self?.demoViewController?.labelCategory?.text = "   ACTIVITIES"
+                //DemoButton.currentActiveButton = .cat2_key
             }
             if type == .cat3_key {
                 //self?.demoViewController?.keyboardType = .cat3_key
 //                self?.demoViewController?.keyboardCollection?.actions = keyboard.actionsCat3
 //                self?.demoViewController?.keyboardCollection?.reloadSetup(keyboard.actionsCat3)
                 self?.demoViewController?.labelCategory?.text = "   FOOD & DRINK"
+                //DemoButton.currentActiveButton = .cat3_key
             }
             if type == .cat4_key {
                 //self?.demoViewController?.keyboardType = .cat4_key
 //                self?.demoViewController?.keyboardCollection?.actions = keyboard.actionsCat4
 //                self?.demoViewController?.keyboardCollection?.reloadSetup(keyboard.actionsCat4)
                 self?.demoViewController?.labelCategory?.text = "   OBJECTS & SYMBOLS"
+                //DemoButton.currentActiveButton = .cat4_key
             }
             if type == .cat5_key {
                 //self?.demoViewController?.keyboardType = .cat5_key
 //                self?.demoViewController?.keyboardCollection?.actions = [.switchToKeyboard(.cat5_key)]
 //                self?.demoViewController?.keyboardCollection?.reloadSetup([.switchToKeyboard(.cat5_key)])
                 self?.demoViewController?.labelCategory?.text = "   TRAVEL & PLACES"
+                //DemoButton.currentActiveButton = .cat5_key
             }
 
             self?.demoViewController?.keyboardCollection?.refresh()

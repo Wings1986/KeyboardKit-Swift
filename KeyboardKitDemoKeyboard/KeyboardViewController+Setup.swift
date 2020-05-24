@@ -119,11 +119,12 @@ extension KeyboardViewController {
         keyboardStackView.addArrangedSubview(bottom)
         
         
-        if appearance == .dark {
-            self.view.backgroundColor = .black;
-        } else {
-            self.view.backgroundColor = .clearTappable;
-        }
+//        if appearance == .dark {
+//            self.view.backgroundColor = .black;
+//        } else {
+            
+            //self.view.backgroundColor = .clearTappable;
+//        }
 //        self.view.backgroundColor = .white;
     }
     

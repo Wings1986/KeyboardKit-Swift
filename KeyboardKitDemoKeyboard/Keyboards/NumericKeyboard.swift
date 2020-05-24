@@ -14,6 +14,8 @@ import KeyboardKit
 struct NumericKeyboard: DemoKeyboard {
     
     init(in viewController: KeyboardViewController) {
+        DemoButton.keyboardTypeEnabled = .text
+        viewController.view.backgroundColor = .clearTappable
         actions = type(of: self).actions(in: viewController)
     }
     
@@ -30,7 +32,7 @@ private extension NumericKeyboard {
     }
     
     static func bottomActions(leftmost: KeyboardAction, for vc: KeyboardViewController) -> KeyboardActionRow {
-        return [ switchAction, .switchToKeyboard(.cat1_key), .space, .character("."), .newLine ]
+        return [ switchAction, .switchKeyboard, .switchToKeyboard(.cat1_key), .space, .character("."), .newLine ]
     }
     
     static let characters: [[String]] = [

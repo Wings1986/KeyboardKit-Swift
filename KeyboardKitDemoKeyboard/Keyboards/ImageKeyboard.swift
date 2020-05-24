@@ -7,6 +7,7 @@
 //
 
 import KeyboardKit
+import UIKit
 
 /**
 
@@ -23,6 +24,8 @@ import KeyboardKit
  */
 struct ImageKeyboard: DemoKeyboard {
     init(in viewController: KeyboardViewController) {
+        DemoButton.keyboardTypeEnabled = .emoji
+        viewController.view.backgroundColor = .white
         bottomActions = EmojiKeyboard.bottomActions(
             leftmost: EmojiKeyboard.switchAction,
             for: viewController)

@@ -19,6 +19,14 @@ import KeyboardKit
 import UIKit
 
 class DemoButton: KeyboardButtonView {
+    
+    enum KeyboardTypeEnabled {
+        case emoji
+        case text
+    }
+    
+    static var keyboardTypeEnabled: KeyboardTypeEnabled = .emoji
+    
     public func setup(with action: KeyboardAction, in viewController: KeyboardInputViewController, distribution: UIStackView.Distribution = .fillEqually) {
         super.setup(with: action, in: viewController)
         backgroundColor = .clearTappable
@@ -32,6 +40,7 @@ class DemoButton: KeyboardButtonView {
 
         switch action {
         case let .switchToKeyboard(type):
+            
             if type == .history_key || type == .cat2_key || type == .cat3_key || type == .cat4_key || type == .cat5_key {
                 
                 DispatchQueue.main.async {
@@ -66,12 +75,18 @@ class DemoButton: KeyboardButtonView {
         textLabel?.text = action.buttonText
         textLabel?.textColor = action.tintColor(in: viewController)
         buttonView?.tintColor = action.tintColor(in: viewController)
-        buttonView?.backgroundColor = .white
+        buttonView?.backgroundColor = viewController.view.tintColor
+        
         width = action.buttonWidth(for: distribution)
         applyShadow(.standardButtonShadow)
         currentAction = action
         currentCatButton = self
         
+        switch DemoButton.keyboardTypeEnabled {
+        case .emoji: buttonView?.backgroundColor = .clear
+        case .text: buttonView?.backgroundColor = .white
+        }
+    
     }
 
     var currentAction: KeyboardAction?
@@ -183,6 +198,7 @@ extension KeyboardAction {
         case .none: return 10
         case .shift, .shiftDown: return 40
         case .space: return 100
+        case .newLine: return 80
         default: return 35
         }
     }

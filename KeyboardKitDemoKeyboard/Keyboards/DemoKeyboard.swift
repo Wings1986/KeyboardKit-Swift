@@ -21,8 +21,8 @@ extension DemoKeyboard {
     static func bottomActions(leftmost: KeyboardAction, for vc: KeyboardViewController) -> KeyboardActionRow {
         
         let actions = [
-            leftmost,
             .switchKeyboard,
+            leftmost,
             imageAction(for: vc, catType: 0),
             imageAction(for: vc, catType: 1),
             imageAction(for: vc, catType: 2),

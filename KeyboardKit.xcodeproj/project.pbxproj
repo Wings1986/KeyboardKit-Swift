@@ -14,9 +14,9 @@
 		1891FD3E240FC6CE00A0CB18 /* Facebook Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FD39240FC6CD00A0CB18 /* Facebook Icon.png */; };
 		1891FD3F240FC6CE00A0CB18 /* border.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FD3A240FC6CE00A0CB18 /* border.png */; };
 		1891FD40240FC6CE00A0CB18 /* Communiji Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1891FD3B240FC6CE00A0CB18 /* Communiji Logo.png */; };
-		4507126E2425D07600A395C8 /* KeyboardKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = KeyboardKit::KeyboardKit::Product /* KeyboardKit.framework */; };
-		4507126F2425D07600A395C8 /* KeyboardKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = KeyboardKit::KeyboardKit::Product /* KeyboardKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		450712712425D10200A395C8 /* KeyboardKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = KeyboardKit::KeyboardKit::Product /* KeyboardKit.framework */; };
+		4507126E2425D07600A395C8 /* KeyboardKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "KeyboardKit::KeyboardKit::Product" /* KeyboardKit.framework */; };
+		4507126F2425D07600A395C8 /* KeyboardKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "KeyboardKit::KeyboardKit::Product" /* KeyboardKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		450712712425D10200A395C8 /* KeyboardKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "KeyboardKit::KeyboardKit::Product" /* KeyboardKit.framework */; };
 		4527A3E8246F013B00749761 /* btn_linkedin.png in Resources */ = {isa = PBXBuildFile; fileRef = 4527A3E7246F013B00749761 /* btn_linkedin.png */; };
 		4527A3EE2472F81300749761 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4527A3ED2472F81300749761 /* Stickers.xcassets */; };
 		4527A3F22472F81300749761 /* Communiji.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4527A3EB2472F81100749761 /* Communiji.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -1092,7 +1092,7 @@
 		B7C3FF35A1C0B82E07182B6B /* Pods-KeyboardKitDemoKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardKitDemoKeyboard.debug.xcconfig"; path = "Target Support Files/Pods-KeyboardKitDemoKeyboard/Pods-KeyboardKitDemoKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
 		B8A7EE75C078A816814F6417 /* Pods_KeyboardKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeyboardKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E317197FFF55083609666EAC /* Pods-KeyboardKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardKitDemo.release.xcconfig"; path = "Target Support Files/Pods-KeyboardKitDemo/Pods-KeyboardKitDemo.release.xcconfig"; sourceTree = "<group>"; };
-		KeyboardKit::KeyboardKit::Product /* KeyboardKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KeyboardKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"KeyboardKit::KeyboardKit::Product" /* KeyboardKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KeyboardKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* KeyboardAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAction.swift; sourceTree = "<group>"; };
 		OBJ_11 /* KeyboardActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardActionHandler.swift; sourceTree = "<group>"; };
 		OBJ_12 /* KeyboardActionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardActionRow.swift; sourceTree = "<group>"; };
@@ -1806,7 +1806,7 @@
 		OBJ_231 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				KeyboardKit::KeyboardKit::Product /* KeyboardKit.framework */,
+				"KeyboardKit::KeyboardKit::Product" /* KeyboardKit.framework */,
 				84670445234A709400355331 /* Communiji.app */,
 				8467045D234A711100355331 /* CommunijiKeyboard.appex */,
 				4527A3EB2472F81100749761 /* Communiji.appex */,
@@ -2002,7 +2002,7 @@
 			productReference = 8467045D234A711100355331 /* CommunijiKeyboard.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		KeyboardKit::KeyboardKit /* KeyboardKit */ = {
+		"KeyboardKit::KeyboardKit" /* KeyboardKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_248 /* Build configuration list for PBXNativeTarget "KeyboardKit" */;
 			buildPhases = (
@@ -2016,7 +2016,7 @@
 			);
 			name = KeyboardKit;
 			productName = KeyboardKit;
-			productReference = KeyboardKit::KeyboardKit::Product /* KeyboardKit.framework */;
+			productReference = "KeyboardKit::KeyboardKit::Product" /* KeyboardKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -2050,15 +2050,15 @@
 			);
 			mainGroup = OBJ_5;
 			packageReferences = (
-				A97047D323D507AC001AB983 /* RemoteSwiftPackageReference */,
-				A97047D623D507D4001AB983 /* RemoteSwiftPackageReference */,
-				A97047D923D507F2001AB983 /* RemoteSwiftPackageReference */,
+				A97047D323D507AC001AB983 /* XCRemoteSwiftPackageReference "Quick" */,
+				A97047D623D507D4001AB983 /* XCRemoteSwiftPackageReference "Nimble" */,
+				A97047D923D507F2001AB983 /* XCRemoteSwiftPackageReference "Mockery" */,
 			);
 			productRefGroup = OBJ_231 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				KeyboardKit::KeyboardKit /* KeyboardKit */,
+				"KeyboardKit::KeyboardKit" /* KeyboardKit */,
 				84670444234A709400355331 /* KeyboardKitDemo */,
 				8467045C234A711100355331 /* KeyboardKitDemoKeyboard */,
 				4527A3EA2472F81100749761 /* StickerPack */,
@@ -2911,12 +2911,12 @@
 		};
 		45639BA92425C5C70053D1B1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = KeyboardKit::KeyboardKit /* KeyboardKit */;
+			target = "KeyboardKit::KeyboardKit" /* KeyboardKit */;
 			targetProxy = 45639BA82425C5C70053D1B1 /* PBXContainerItemProxy */;
 		};
 		45639BAB2425C5DF0053D1B1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = KeyboardKit::KeyboardKit /* KeyboardKit */;
+			target = "KeyboardKit::KeyboardKit" /* KeyboardKit */;
 			targetProxy = 45639BAA2425C5DF0053D1B1 /* PBXContainerItemProxy */;
 		};
 		84670463234A711100355331 /* PBXTargetDependency */ = {
@@ -3326,8 +3326,10 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				TARGET_NAME = KeyboardKit;
 			};
 			name = Debug;
@@ -3362,8 +3364,10 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				TARGET_NAME = KeyboardKit;
 			};
 			name = Release;
@@ -3522,7 +3526,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A97047D323D507AC001AB983 /* RemoteSwiftPackageReference */ = {
+		A97047D323D507AC001AB983 /* XCRemoteSwiftPackageReference "Quick" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Quick.git";
 			requirement = {
@@ -3530,7 +3534,7 @@
 				minimumVersion = 2.2.0;
 			};
 		};
-		A97047D623D507D4001AB983 /* RemoteSwiftPackageReference */ = {
+		A97047D623D507D4001AB983 /* XCRemoteSwiftPackageReference "Nimble" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Nimble.git";
 			requirement = {
@@ -3538,7 +3542,7 @@
 				version = 8.0.2;
 			};
 		};
-		A97047D923D507F2001AB983 /* RemoteSwiftPackageReference */ = {
+		A97047D923D507F2001AB983 /* XCRemoteSwiftPackageReference "Mockery" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/danielsaidi/Mockery.git";
 			requirement = {

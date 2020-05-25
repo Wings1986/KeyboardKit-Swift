@@ -86,7 +86,7 @@ open class ToastDialog: KeyboardDialog, CustomViewDelegate {
     }
     
     public func openSettings() {
-        
+
     }
 }
 

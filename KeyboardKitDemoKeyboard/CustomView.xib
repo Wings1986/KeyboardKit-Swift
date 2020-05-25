@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -17,33 +17,38 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="349"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Access is Disabled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H80-Ao-6sv">
-                    <rect key="frame" x="28" y="84" width="360" height="33"/>
-                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go to iOS Settings -&gt; General -&gt; Keyboards -&gt; Communiji and turn on Allow Full Access" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNn-4x-qmY">
-                    <rect key="frame" x="28" y="116" width="360" height="49"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="49" id="aQg-L4-8FZ"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Learn More" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1c-Ws-UBI">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Xti-70-3gy">
+                    <rect key="frame" x="28" y="136" width="358" height="77"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Access is Disabled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H80-Ao-6sv">
+                            <rect key="frame" x="85" y="0.0" width="188.5" height="20"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go to iOS Settings -&gt; General -&gt; Keyboards -&gt; Communiji and turn on Allow Full Access" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNn-4x-qmY">
+                            <rect key="frame" x="0.0" y="28" width="358" height="49"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="49" id="aQg-L4-8FZ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Learn More" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1c-Ws-UBI">
                     <rect key="frame" x="28" y="167" width="360" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                     <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYx-z9-br4">
-                    <rect key="frame" x="367" y="250" width="28" height="28"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYx-z9-br4">
+                    <rect key="frame" x="364" y="299" width="30" height="30"/>
                     <color key="backgroundColor" name="darkButton"/>
                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                     <state key="normal" title="X">
@@ -58,9 +63,8 @@
                         <action selector="onClickClose:" destination="-1" eventType="touchUpInside" id="VO4-4z-8ZJ"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Communiji" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8i-nb-YmJ">
-                    <rect key="frame" x="98" y="256" width="217" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Communiji" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8i-nb-YmJ">
+                    <rect key="frame" x="160" y="304" width="94" height="21"/>
                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                     <color key="textColor" name="darkButton"/>
                     <nil key="highlightedColor"/>
@@ -68,19 +72,17 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="vNn-4x-qmY" firstAttribute="leading" secondItem="H80-Ao-6sv" secondAttribute="leading" id="85Q-tr-510"/>
-                <constraint firstItem="H1c-Ws-UBI" firstAttribute="top" secondItem="H80-Ao-6sv" secondAttribute="bottom" constant="50" id="AD9-i3-ZRP"/>
-                <constraint firstItem="vNn-4x-qmY" firstAttribute="leading" secondItem="H1c-Ws-UBI" secondAttribute="leading" id="V9q-48-I5n"/>
-                <constraint firstItem="H1c-Ws-UBI" firstAttribute="top" secondItem="vNn-4x-qmY" secondAttribute="bottom" constant="2" id="acF-E6-HCq"/>
-                <constraint firstItem="vNn-4x-qmY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="28" id="cP0-Kp-zSG"/>
-                <constraint firstItem="H80-Ao-6sv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="chc-zu-tls"/>
-                <constraint firstItem="vNn-4x-qmY" firstAttribute="trailing" secondItem="H80-Ao-6sv" secondAttribute="trailing" id="k1d-Fj-5SN"/>
-                <constraint firstItem="vNn-4x-qmY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="72" id="oee-nd-90l"/>
-                <constraint firstItem="vNn-4x-qmY" firstAttribute="trailing" secondItem="H1c-Ws-UBI" secondAttribute="trailing" id="sK1-X1-rWI"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vNn-4x-qmY" secondAttribute="trailing" constant="26" id="tZY-kj-KBR"/>
+                <constraint firstItem="Xti-70-3gy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="28" id="4v1-7g-hIE"/>
+                <constraint firstItem="Xti-70-3gy" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="7MU-rF-yro"/>
+                <constraint firstItem="F8i-nb-YmJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="K60-7K-Xps"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HYx-z9-br4" secondAttribute="bottom" constant="20" id="O4p-0l-FQn"/>
+                <constraint firstAttribute="trailing" secondItem="Xti-70-3gy" secondAttribute="trailing" constant="28" id="cOf-RC-3GR"/>
+                <constraint firstItem="HYx-z9-br4" firstAttribute="centerY" secondItem="F8i-nb-YmJ" secondAttribute="centerY" id="dXz-Iz-ynF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HYx-z9-br4" secondAttribute="trailing" constant="20" id="uel-8j-WRK"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+            <point key="canvasLocation" x="124.6376811594203" y="-51.227678571428569"/>
         </view>
     </objects>
     <resources>

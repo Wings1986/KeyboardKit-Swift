@@ -59,7 +59,7 @@ class CustomView: UIView {
     }
     
     @IBAction func onClickClose(_ sender: Any) {
-        
+    
         self.removeFromSuperview()
     }
 }

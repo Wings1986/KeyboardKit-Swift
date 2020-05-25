@@ -72,17 +72,16 @@ class KeyboardViewController: KeyboardInputViewController {
         super.viewDidLoad()
         
         keyboardActionHandler = DemoKeyboardActionHandler(inputViewController: self)
+        setupKeyboard()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupKeyboard()
-        
-//        guard hasFullAccess else {
-//            //return alert("You must enable full access to copy images.")
-//            dialoger.addView(in: view)
-//            return
-//        }
+        guard hasFullAccess else {
+            //return alert("You must enable full access to copy images.")
+            dialoger.addView(in: view)
+            return
+        }
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

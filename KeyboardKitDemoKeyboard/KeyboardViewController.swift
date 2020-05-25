@@ -72,7 +72,7 @@ class KeyboardViewController: KeyboardInputViewController {
         super.viewDidLoad()
         
         keyboardActionHandler = DemoKeyboardActionHandler(inputViewController: self)
-        setupKeyboard()
+        //setupKeyboard()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -82,6 +82,8 @@ class KeyboardViewController: KeyboardInputViewController {
             dialoger.addView(in: view)
             return
         }
+        
+        setupKeyboard()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

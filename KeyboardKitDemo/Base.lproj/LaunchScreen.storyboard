@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Communiji Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="K1S-of-URv">
-                                <rect key="frame" x="21" y="363" width="373" height="171"/>
+                                <rect key="frame" x="20.5" y="362.5" width="373" height="171"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="171" id="3WZ-Px-rNe"/>
                                     <constraint firstAttribute="width" constant="373" id="StF-ku-5uT"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="K1S-of-URv" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="MsG-Qi-Jck"/>
                             <constraint firstItem="K1S-of-URv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="erl-hf-tQg"/>

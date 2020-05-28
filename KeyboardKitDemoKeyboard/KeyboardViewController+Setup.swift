@@ -98,7 +98,7 @@ extension KeyboardViewController {
         } else {
             label.textColor = .darkGray
         }
-//        label.textColor = .darkGray
+        label.textColor = .darkGray
         
         
         let labelUP = UILabel(frame: CGRect(x: 20, y: 10, width: 320, height: 50))

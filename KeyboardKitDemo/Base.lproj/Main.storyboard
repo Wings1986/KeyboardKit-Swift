@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gzq-Ta-bxJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gzq-Ta-bxJ">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -53,11 +54,11 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="installKeyboardTapped:" destination="XIY-m0-LdX" eventType="touchUpInside" id="brs-V8-QbX"/>
+                                    <segue destination="QIl-E7-huF" kind="presentation" id="uFr-3M-rxO"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="nbf-Q3-Vj0">
-                                <rect key="frame" x="106" y="792" width="202" height="60"/>
+                                <rect key="frame" x="106" y="722" width="202" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ul-hk-bxC">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -97,42 +98,84 @@
                                     <constraint firstAttribute="height" constant="60" id="Xcb-6P-LrP"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Settings 2. General 3. keyboard 4. keyboards 5. Communiji 6. Allow Full Access" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15l-2H-GNe">
-                                <rect key="frame" x="122" y="606.33333333333337" width="170" height="150"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O2m-90-Vah">
+                                <rect key="frame" x="34" y="812" width="347" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="170" id="BPt-yr-dM2"/>
-                                    <constraint firstAttribute="height" constant="150" id="I3I-Vm-bJA"/>
+                                    <constraint firstAttribute="height" constant="30" id="XjO-kg-n0j"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="By installing the keyboard, you agree to our ">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" metaFont="miniSystem"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="Terms of Service &amp; Privacy Policy">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" metaFont="systemBold" size="9"/>
+                                                <font key="NSOriginalFont" metaFont="systemBold" size="9"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="privacyTapped:" destination="XIY-m0-LdX" eventType="touchUpInside" id="vZ0-ei-qr1"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Up2-6E-3SY" firstAttribute="centerY" secondItem="OTJ-QC-K4Q" secondAttribute="centerY" multiplier="0.8" id="35u-KZ-VZM"/>
                             <constraint firstItem="BPu-8Y-A9R" firstAttribute="width" secondItem="3Wr-ew-sRR" secondAttribute="width" id="3up-QN-0Tv"/>
-                            <constraint firstItem="15l-2H-GNe" firstAttribute="top" secondItem="BPu-8Y-A9R" secondAttribute="bottom" constant="3" id="7Jv-Zu-l3N"/>
                             <constraint firstItem="BPu-8Y-A9R" firstAttribute="height" secondItem="3Wr-ew-sRR" secondAttribute="height" id="C6L-Eb-7au"/>
                             <constraint firstItem="3Wr-ew-sRR" firstAttribute="centerY" secondItem="OTJ-QC-K4Q" secondAttribute="centerY" multiplier="1.2" id="Ccl-dq-xZC"/>
                             <constraint firstItem="BPu-8Y-A9R" firstAttribute="centerY" secondItem="3Wr-ew-sRR" secondAttribute="centerY" id="Ig6-4X-3vP"/>
                             <constraint firstItem="3Wr-ew-sRR" firstAttribute="height" secondItem="Up2-6E-3SY" secondAttribute="height" multiplier="0.7" id="InL-r4-cYD"/>
                             <constraint firstItem="Up2-6E-3SY" firstAttribute="width" secondItem="OTJ-QC-K4Q" secondAttribute="width" multiplier="0.9" id="JhZ-Nw-47X"/>
                             <constraint firstItem="3Wr-ew-sRR" firstAttribute="centerX" secondItem="Up2-6E-3SY" secondAttribute="centerX" id="QEc-Pw-lgj"/>
-                            <constraint firstItem="15l-2H-GNe" firstAttribute="centerX" secondItem="O7z-ki-zYC" secondAttribute="centerX" id="dXc-1w-fFo"/>
                             <constraint firstItem="Up2-6E-3SY" firstAttribute="centerX" secondItem="OTJ-QC-K4Q" secondAttribute="centerX" id="hfi-Xx-5S8"/>
                             <constraint firstItem="BPu-8Y-A9R" firstAttribute="centerX" secondItem="3Wr-ew-sRR" secondAttribute="centerX" id="nuI-5c-Vsy"/>
-                            <constraint firstItem="nbf-Q3-Vj0" firstAttribute="bottom" secondItem="OTJ-QC-K4Q" secondAttribute="bottom" constant="-10" id="pc6-FE-yki"/>
+                            <constraint firstItem="nbf-Q3-Vj0" firstAttribute="bottom" secondItem="OTJ-QC-K4Q" secondAttribute="bottom" constant="-80" id="pc6-FE-yki"/>
                             <constraint firstItem="3Wr-ew-sRR" firstAttribute="width" secondItem="Up2-6E-3SY" secondAttribute="width" id="pcH-Ar-oFt"/>
+                            <constraint firstItem="O2m-90-Vah" firstAttribute="centerX" secondItem="O7z-ki-zYC" secondAttribute="centerX" id="vie-SQ-sfb"/>
+                            <constraint firstItem="OTJ-QC-K4Q" firstAttribute="bottom" secondItem="O2m-90-Vah" secondAttribute="bottom" constant="20" id="xbF-j8-kk5"/>
                             <constraint firstItem="nbf-Q3-Vj0" firstAttribute="centerX" secondItem="OTJ-QC-K4Q" secondAttribute="centerX" id="zFU-Rn-lxf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OTJ-QC-K4Q"/>
                     </view>
                     <navigationItem key="navigationItem" title="iGold" id="7tX-h3-Tbz"/>
+                    <connections>
+                        <outlet property="btnPrivacy" destination="O2m-90-Vah" id="cMg-KJ-Ksn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4c-cV-5Bb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="376.81159420289856" y="-96.428571428571431"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GBI-6Y-tGE">
+            <objects>
+                <viewController id="QIl-E7-huF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZXF-EF-cQV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="setting_page.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hjG-Dy-5be">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94509803921568625" blue="0.9687284827" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="koo-8A-3C6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cmb-AG-n3b"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oJo-nE-7XM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1105.7971014492755" y="-95.089285714285708"/>
         </scene>
     </scenes>
     <resources>
@@ -141,5 +184,6 @@
         <image name="Instagram Icon.png" width="100" height="100"/>
         <image name="border.png" width="320" height="60.5"/>
         <image name="btn_linkedin.png" width="100" height="100"/>
+        <image name="setting_page.jpg" width="198.72000122070312" height="312.48001098632812"/>
     </resources>
 </document>

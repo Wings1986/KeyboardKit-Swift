@@ -77,11 +77,11 @@ class KeyboardViewController: KeyboardInputViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        guard hasFullAccess else {
-            //return alert("You must enable full access to copy images.")
-            dialoger.addView(in: view)
-            return
-        }
+//        guard hasFullAccess else {
+//            //return alert("You must enable full access to copy images.")
+//            dialoger.addView(in: view)
+//            return
+//        }
         
         setupKeyboard()
     }

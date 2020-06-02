@@ -96,17 +96,17 @@ class KeyboardViewController: KeyboardInputViewController {
     
     override func textDidChange(_ textInput: UITextInput?) {
         super.textDidChange(textInput)
-        requestAutocompleteSuggestions()
+        // requestAutocompleteSuggestions()
     }
     
     override func selectionWillChange(_ textInput: UITextInput?) {
         super.selectionWillChange(textInput)
-        autocompleteToolbar.reset()
+        // autocompleteToolbar.reset()
     }
     
     override func selectionDidChange(_ textInput: UITextInput?) {
         super.selectionDidChange(textInput)
-        autocompleteToolbar.reset()
+        // autocompleteToolbar.reset()
     }
     
     

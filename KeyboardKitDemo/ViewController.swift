@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var btnPrivacy: UIButton!
+    
     @IBAction func instaTapped(_ sender: Any) {
         if let url = URL(string: "https://instagram.com/communiji?igshid=1h7ahm2r1iqd") {
             UIApplication.shared.open(url)
@@ -22,6 +24,12 @@ class ViewController: UIViewController {
     }
     @IBAction func linkedTapped(_ sender: Any) {
         if let url = URL(string: "https://www.linkedin.com/company/communiji") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    @IBAction func privacyTapped(_ sender: Any) {
+        if let url = URL(string: "http://communiji.com/privacy-policy-2") {
             UIApplication.shared.open(url)
         }
     }

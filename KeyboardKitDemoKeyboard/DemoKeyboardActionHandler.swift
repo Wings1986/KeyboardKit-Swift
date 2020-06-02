@@ -154,7 +154,7 @@ class DemoKeyboardActionHandler: StandardKeyboardActionHandler {
 
     override func handle(_ gesture: KeyboardGesture, on action: KeyboardAction, view: UIView) {
         super.handle(gesture, on: action, view: view)
-        demoViewController?.requestAutocompleteSuggestions()
+        // demoViewController?.requestAutocompleteSuggestions()
     }
 }
 

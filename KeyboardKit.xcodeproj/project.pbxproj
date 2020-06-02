@@ -538,6 +538,7 @@
 		4541AC97244F5692004237A0 /* food_14_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 4541AA93244F5691004237A0 /* food_14_small.png */; };
 		4541AC9B24504524004237A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4541AC9A24504524004237A0 /* GoogleService-Info.plist */; };
 		4541AC9C24504524004237A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4541AC9A24504524004237A0 /* GoogleService-Info.plist */; };
+		45862DE9247D736800EBD709 /* setting_page.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45862DE8247D736800EBD709 /* setting_page.jpg */; };
 		45913C69243304D500B74A4A /* KeyboardDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45913C68243304D500B74A4A /* KeyboardDialog.swift */; };
 		45913C6B243304F200B74A4A /* ToastDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45913C6A243304F200B74A4A /* ToastDialog.swift */; };
 		45913C6D2433418100B74A4A /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45913C6C2433418100B74A4A /* CustomView.xib */; };
@@ -1016,6 +1017,7 @@
 		4541AA92244F5691004237A0 /* food_21_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food_21_small.png; sourceTree = "<group>"; };
 		4541AA93244F5691004237A0 /* food_14_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food_14_small.png; sourceTree = "<group>"; };
 		4541AC9A24504524004237A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		45862DE8247D736800EBD709 /* setting_page.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = setting_page.jpg; sourceTree = "<group>"; };
 		45913C68243304D500B74A4A /* KeyboardDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDialog.swift; sourceTree = "<group>"; };
 		45913C6A243304F200B74A4A /* ToastDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastDialog.swift; sourceTree = "<group>"; };
 		45913C6C2433418100B74A4A /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
@@ -1623,6 +1625,7 @@
 		84670469234A718C00355331 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				45862DE8247D736800EBD709 /* setting_page.jpg */,
 				4527A3E7246F013B00749761 /* btn_linkedin.png */,
 				1891FD3A240FC6CE00A0CB18 /* border.png */,
 				1891FD3B240FC6CE00A0CB18 /* Communiji Logo.png */,
@@ -2224,6 +2227,7 @@
 				4541AB66244F5692004237A0 /* object_12_small.png in Resources */,
 				4541AB54244F5692004237A0 /* aunt_9_small.png in Resources */,
 				4541AC54244F5692004237A0 /* act7_small.png in Resources */,
+				45862DE9247D736800EBD709 /* setting_page.jpg in Resources */,
 				4541AB80244F5692004237A0 /* object_1_small.png in Resources */,
 				4541AC76244F5692004237A0 /* food_9_small.png in Resources */,
 				4541AB90244F5692004237A0 /* travel_15.png in Resources */,
@@ -2963,7 +2967,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = GMRNBDYAXM;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -3002,7 +3006,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = GMRNBDYAXM;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -3056,7 +3060,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = GMRNBDYAXM;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -3128,7 +3132,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = GMRNBDYAXM;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -3192,7 +3196,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = GMRNBDYAXM;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -3264,7 +3268,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = GMRNBDYAXM;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

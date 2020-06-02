@@ -25,7 +25,7 @@ class DemoButton: KeyboardButtonView {
         case text
     }
     
-    static var currentActiveButton: KeyboardType = .cat1_key
+    static var currentActiveButton: KeyboardType = .emojis
     static var keyboardTypeEnabled: KeyboardTypeEnabled = .emoji
     
     public func setup(with action: KeyboardAction, in viewController: KeyboardInputViewController, distribution: UIStackView.Distribution = .fillEqually) {
@@ -46,11 +46,13 @@ class DemoButton: KeyboardButtonView {
                 
                 DispatchQueue.main.async {
                     self.currentKeyboard = type
+                    
                     if type == DemoButton.currentActiveButton {
-                        self.buttonImageMain?.image = action.buttonSelectedCatImages(for: type)
+                         self.buttonImageMain?.image = action.buttonSelectedCatImages(for: type)
                     } else {
                          self.buttonImageMain?.image = action.buttonCatImages(for: type)
                     }
+                    
                     
                     self.buttonImageMain.contentMode = .center
                 }

@@ -177,12 +177,12 @@ private extension DemoKeyboardActionHandler {
 
     func copyImage(_ image: UIImage) {
         guard let input = inputViewController as? KeyboardViewController else { return }
-//        guard input.hasFullAccess else {
-//            //return alert("You must enable full access to copy images.")
-//            guard let input = inputViewController as? KeyboardViewController else { return }
-//            input.dialoger.addView(in: input.view)
-//            return
-//        }
+        guard input.hasFullAccess else {
+            //return alert("You must enable full access to copy images.")
+            guard let input = inputViewController as? KeyboardViewController else { return }
+            input.dialoger.addView(in: input.view)
+            return
+        }
         guard image.copyToPasteboard() else { return alert("The image could not be copied.") }
         alert("Copied. Now paste it!")
     }

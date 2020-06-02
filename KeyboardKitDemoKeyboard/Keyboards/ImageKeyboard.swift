@@ -25,6 +25,7 @@ import UIKit
 struct ImageKeyboard: DemoKeyboard {
     init(in viewController: KeyboardViewController) {
         DemoButton.keyboardTypeEnabled = .emoji
+        DemoButton.currentActiveButton = viewController.keyboardType
         viewController.view.backgroundColor = .white
         bottomActions = EmojiKeyboard.bottomActions(
             leftmost: EmojiKeyboard.switchAction,

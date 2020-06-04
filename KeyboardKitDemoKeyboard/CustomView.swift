@@ -23,8 +23,9 @@ class CustomView: UIView {
 
     @IBOutlet var contentView: UIView!
     
-//    @IBOutlet weak var btnSettings: UIButton!
+    @IBOutlet weak var btnSettings: UIButton!
     @IBOutlet weak var btnClose: UIButton!
+    @IBOutlet weak var btnEng: UIButton!
     
     
     var delegate: CustomViewDelegate?
@@ -47,8 +48,9 @@ class CustomView: UIView {
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         
         
-//        btnSettings.layer.cornerRadius = 24
+        btnSettings.layer.cornerRadius = 18
         btnClose.layer.cornerRadius = 14;
+        btnEng.layer.cornerRadius = 14;
     }
     
 
@@ -62,4 +64,11 @@ class CustomView: UIView {
     
         self.removeFromSuperview()
     }
+    @IBAction func onClickEngKey(_ sender: Any) {
+        
+    }
+    
+    @IBAction func onClickGlobe(_ sender: Any) {
+    }
+    
 }

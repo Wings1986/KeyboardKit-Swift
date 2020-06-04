@@ -36,7 +36,7 @@ private extension AlphabeticKeyboard {
     }
     
     static func bottomActions(leftmost: KeyboardAction, for vc: KeyboardViewController) -> KeyboardActionRow {
-        return [ switchAction, .switchKeyboard, .switchToKeyboard(.cat1_key), .space, .character("."), .newLine ]
+        return [ switchAction, .switchKeyboard, .space, .switchToKeyboard(.cat1_key), .newLine ]
     }
     
     static let characters: [[String]] = [
@@ -58,6 +58,11 @@ private extension Sequence where Iterator.Element == KeyboardActionRow {
     
     func addingSideActions(uppercased: Bool) -> [Iterator.Element] {
         var result = map { $0 }
+        result[1].insert(.command, at: 0)
+        result[1].append(.none)
+        result[1].append(.command)
+        result[1].append(.none)
+
         result[2].insert(uppercased ? .shiftDown : .shift, at: 0)
         result[2].insert(.none, at: 1)
         result[2].append(.none)

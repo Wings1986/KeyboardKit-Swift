@@ -46,7 +46,9 @@ public enum KeyboardAction: Equatable {
     space,
     switchKeyboard,
     switchToKeyboard(KeyboardType),
-    tab
+    tab,
+    empty,
+    backImage
 }
 
 
@@ -59,7 +61,7 @@ public extension KeyboardAction {
      */
     var isDeleteAction: Bool {
         switch self {
-        case .backspace: return true
+        case .backspace, .backImage: return true
         default: return false
         }
     }
@@ -82,7 +84,7 @@ public extension KeyboardAction {
      */
     var isSystemAction: Bool {
         switch self {
-        case .backspace: return true
+        case .backspace, .backImage: return true
         case .capsLock: return true
         case .command: return true
         case .dismissKeyboard: return true
@@ -118,7 +120,7 @@ public extension KeyboardAction {
      */
     var standardTextDocumentProxyAction: ((UITextDocumentProxy?) -> Void)? {
         switch self {
-        case .backspace: return { proxy in proxy?.deleteBackward() }
+        case .backspace, .backImage: return { proxy in proxy?.deleteBackward() }
         case .character(let char): return { proxy in proxy?.insertText(char) }
         case .moveCursorBackward: return { proxy in proxy?.adjustTextPosition(byCharacterOffset: -1) }
         case .moveCursorForward: return { proxy in proxy?.adjustTextPosition(byCharacterOffset: 1) }

@@ -29,7 +29,7 @@ extension DemoKeyboard {
             imageAction(for: vc, catType: 5),
             leftmost,
             .switchKeyboard,
-            .backspace]
+            .backImage]
         
         return actions
 

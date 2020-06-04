@@ -83,9 +83,9 @@ class KeyboardViewController: KeyboardInputViewController {
 //            return
 //        }
         
-        if !hasFullAccess {
-            keyboardType = KeyboardType.alphabetic(uppercased: false)
-        }
+//        if !hasFullAccess {
+//            keyboardType = KeyboardType.alphabetic(uppercased: false)
+//        }
         
         setupKeyboard()
     }

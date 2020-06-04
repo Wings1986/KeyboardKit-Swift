@@ -59,21 +59,23 @@ class DemoButton: KeyboardButtonView {
             }
 
            
-        case .backspace:
-            DispatchQueue.main.async {
-                self.buttonImageMain?.image = action.buttonImage
-                self.buttonImageMain.contentMode = .center
-            }
-            break
+//        case .backspace:
+//            DispatchQueue.main.async {
+//                self.buttonImageMain?.image = action.buttonImage
+//                self.buttonImageMain.contentMode = .center
+//            }
+//            break
     
 
         default: print("")
         }
+        
+        
         textLabel?.font = action.buttonFont
         textLabel?.text = action.buttonText
         textLabel?.textColor = action.tintColor(in: viewController)
         buttonView?.tintColor = action.tintColor(in: viewController)
-        buttonView?.backgroundColor = viewController.view.tintColor
+        buttonView?.backgroundColor = action.buttonColor(for: viewController)  //viewController.view.tintColor
         
         width = action.buttonWidth(for: distribution)
         applyShadow(.standardButtonShadow)
@@ -82,7 +84,16 @@ class DemoButton: KeyboardButtonView {
         
         switch DemoButton.keyboardTypeEnabled {
         case .emoji: buttonView?.backgroundColor = .clear
-        case .text: buttonView?.backgroundColor = .white
+//        case .text: buttonView?.backgroundColor = .white
+        default: print("")
+        }
+        
+        switch action {
+        case .command:
+            buttonView?.backgroundColor = .clear
+        case .newLine:
+            buttonView?.backgroundColor = UIColor.init(red: 103/256.0, green: 256/256.0, blue: 145.0/256.0, alpha: 1.0)
+        default: print("")
         }
     
     }
@@ -127,7 +138,7 @@ extension KeyboardAction {
     var buttonImage: UIImage? {
         switch self {
         case .image(_, let imageName, _): return UIImage(named: imageName)
-        case .backspace: return Asset.Images.Buttons.backspace.image
+        case .backImage: return Asset.Images.Buttons.backspace.image
         case .switchKeyboard: return Asset.Images.Buttons.switchKeyboard.image
         default: return nil
         }
@@ -135,11 +146,11 @@ extension KeyboardAction {
 
     var buttonText: String? {
         switch self {
-        //case .backspace: return "⌫"
+        case .backspace: return "⌫"
         case let .character(text): return text
         case .newLine: return "return"
         case .shift, .shiftDown: return "⇧"
-        case .space: return "space"
+        case .space: return "Communiji"
         case let .switchToKeyboard(type): return buttonText(for: type)
         default: return nil
         }
@@ -194,9 +205,12 @@ extension KeyboardAction {
     var buttonWidth: CGFloat {
         switch self {
         case .none: return 10
-        case .shift, .shiftDown: return 40
-        case .space: return 100
-        case .newLine: return 80
+        case .shift, .shiftDown: return 55
+        case .backspace: return 55
+        case .switchToKeyboard(.symbolic), .switchToKeyboard(.numeric), .switchToKeyboard(.alphabetic(uppercased: false)) : return 55
+        case .space: return 170
+        case .newLine: return 55
+        case .command: return 20
         default: return 35
         }
     }

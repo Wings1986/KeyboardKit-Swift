@@ -32,7 +32,7 @@ private extension SymbolicKeyboard {
     }
     
     static func bottomActions(leftmost: KeyboardAction, for vc: KeyboardViewController) -> KeyboardActionRow {
-        return [ switchAction, .switchKeyboard, .switchToKeyboard(.cat1_key), .space, .character("."), .newLine ]
+        return [ switchAction, .switchKeyboard, .space, .switchToKeyboard(.cat1_key), .newLine ]
     }
     
     static var characters: [[String]] = [

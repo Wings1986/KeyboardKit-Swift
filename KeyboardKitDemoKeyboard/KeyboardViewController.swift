@@ -72,11 +72,13 @@ class KeyboardViewController: KeyboardInputViewController {
         super.viewDidLoad()
         
         keyboardActionHandler = DemoKeyboardActionHandler(inputViewController: self)
+        dialoger.keyboardViewController = self
         //setupKeyboard()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
 //        guard hasFullAccess else {
 //            //return alert("You must enable full access to copy images.")
 //            dialoger.addView(in: view)
@@ -113,6 +115,27 @@ class KeyboardViewController: KeyboardInputViewController {
         // autocompleteToolbar.reset()
     }
     
+    // MARK: - Public
+    
+    func openSettings() {
+    
+        guard let url = URL(string: UIApplication.openSettingsURLString) else {
+            return
+        }
+        extensionContext?.open(url, completionHandler: { (success) in
+            if !success {
+                var responder = self as UIResponder?
+
+                while (responder != nil){
+                    let selectorOpenURL = NSSelectorFromString("openURL:")
+                    if responder?.responds(to: selectorOpenURL) == true {
+                        _ = responder?.perform(selectorOpenURL, with: url)
+                    }
+                    responder = responder?.next
+                }
+            }
+        })
+    }
     
     // MARK: - Properties
     

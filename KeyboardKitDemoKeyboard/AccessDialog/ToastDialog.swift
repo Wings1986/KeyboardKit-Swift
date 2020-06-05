@@ -17,8 +17,7 @@ import UIKit
  proxies, e.g. combined with theme classes.
 */
 open class ToastDialog: KeyboardDialog, CustomViewDelegate {
-    
-    
+
     // MARK: - Initialization
     
     public init(appearance: Appearance = Appearance()) {
@@ -29,7 +28,7 @@ open class ToastDialog: KeyboardDialog, CustomViewDelegate {
     // MARK: - Public Properties
     
     public let appearance: Appearance
-    
+    weak var keyboardViewController: KeyboardViewController?
     
     // MARK: - Types
     
@@ -59,11 +58,17 @@ open class ToastDialog: KeyboardDialog, CustomViewDelegate {
         //let container = createContainerView(in: view)
         
         let container = CustomView(frame: view.frame)
-        //container.delegate = self;
         
+        let switchView = self.keyboardViewController?.button(for: .switchKeyboard)
+        switchView?.frame = CGRect(x: 8,
+                                   y: view.frame.height - 60 - 8,
+                                   width: 60,
+                                   height: 60)
+        
+        container.addSubview(switchView!)
+        container.delegate = self;
         view.addSubview(container)
  
-        
         //unpresent(container, withDuration: 3)
     }
     
@@ -86,8 +91,14 @@ open class ToastDialog: KeyboardDialog, CustomViewDelegate {
     }
     
     public func openSettings() {
-
+        self.keyboardViewController?.openSettings()
     }
+    
+
+    public func openTextKeyboard() {
+        self.keyboardViewController?.keyboardType = .alphabetic(uppercased: false)
+    }
+    
 }
 
 

@@ -9,6 +9,7 @@ import UIKit
 
 public protocol CustomViewDelegate {
     func openSettings()
+    func openTextKeyboard()
 }
 
 class CustomView: UIView {
@@ -26,11 +27,11 @@ class CustomView: UIView {
     @IBOutlet weak var btnSettings: UIButton!
     @IBOutlet weak var btnClose: UIButton!
     @IBOutlet weak var btnEng: UIButton!
-    
+    @IBOutlet weak var btnSwitch: UIButton!
     
     var delegate: CustomViewDelegate?
-    
-    
+    var viewSwitch: UIView?
+            
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -51,21 +52,20 @@ class CustomView: UIView {
         btnSettings.layer.cornerRadius = 18
         btnClose.layer.cornerRadius = 14;
         btnEng.layer.cornerRadius = 14;
+
     }
     
 
     @IBAction func onClickOpenSetting(_ sender: Any) {
-        
         delegate?.openSettings()
-        
     }
     
     @IBAction func onClickClose(_ sender: Any) {
-    
         self.removeFromSuperview()
     }
     @IBAction func onClickEngKey(_ sender: Any) {
-        
+        delegate?.openTextKeyboard()
+        self.removeFromSuperview()
     }
     
     @IBAction func onClickGlobe(_ sender: Any) {

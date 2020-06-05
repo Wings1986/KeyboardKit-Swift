@@ -55,9 +55,9 @@ class KeyboardViewController: KeyboardInputViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
       super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
-        /* iGold 
+        /* iGold */
         FirebaseApp.configure()
-        */
+        
     }
     
 //    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {

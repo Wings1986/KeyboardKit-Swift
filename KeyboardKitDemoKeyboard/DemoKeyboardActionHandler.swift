@@ -56,13 +56,13 @@ class DemoKeyboardActionHandler: StandardKeyboardActionHandler {
                 
                 [weak self] in self?.copyImage(UIImage(named: imageName)!)
                 
-                /* iGold
+                /* iGold */
                 Analytics.logEvent(AnalyticsEventViewItem, parameters: [
                                     AnalyticsParameterItemID: "ios-keyboard",
                                     AnalyticsParameterItemName: "emoji",
                                     AnalyticsParameterContentType: imageName
                 ])
-                 */
+                 
                 
             }
         }
